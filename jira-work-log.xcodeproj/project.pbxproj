@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
+		B2FAEBAF21FD1D5F001F0D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */; };
+		B2FAEBB221FD1D5F001F0D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */; };
+		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
+		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
+		B2FAEBC221FD1D61001F0D39 /* jira_work_logTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBC121FD1D61001F0D39 /* jira_work_logTests.swift */; };
+		B2FAEBCD21FD1D61001F0D39 /* jira_work_logUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBCC21FD1D61001F0D39 /* jira_work_logUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2FAEBBE21FD1D61001F0D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2FAEBA121FD1D5F001F0D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2FAEBA821FD1D5F001F0D39;
+			remoteInfo = "jira-work-log";
+		};
+		B2FAEBC921FD1D61001F0D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2FAEBA121FD1D5F001F0D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2FAEBA821FD1D5F001F0D39;
+			remoteInfo = "jira-work-log";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2FAEBB121FD1D5F001F0D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2FAEBB621FD1D61001F0D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2FAEBB821FD1D61001F0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2FAEBBD21FD1D61001F0D39 /* jira-work-logTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jira-work-logTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FAEBC121FD1D61001F0D39 /* jira_work_logTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jira_work_logTests.swift; sourceTree = "<group>"; };
+		B2FAEBC321FD1D61001F0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2FAEBC821FD1D61001F0D39 /* jira-work-logUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jira-work-logUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FAEBCC21FD1D61001F0D39 /* jira_work_logUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jira_work_logUITests.swift; sourceTree = "<group>"; };
+		B2FAEBCE21FD1D61001F0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2FAEBA621FD1D5F001F0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBBA21FD1D61001F0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBC521FD1D61001F0D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2FAEBA021FD1D5F001F0D39 = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBAB21FD1D5F001F0D39 /* jira-work-log */,
+				B2FAEBC021FD1D61001F0D39 /* jira-work-logTests */,
+				B2FAEBCB21FD1D61001F0D39 /* jira-work-logUITests */,
+				B2FAEBAA21FD1D5F001F0D39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2FAEBAA21FD1D5F001F0D39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */,
+				B2FAEBBD21FD1D61001F0D39 /* jira-work-logTests.xctest */,
+				B2FAEBC821FD1D61001F0D39 /* jira-work-logUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2FAEBAB21FD1D5F001F0D39 /* jira-work-log */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */,
+				B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */,
+				B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */,
+				B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */,
+				B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */,
+				B2FAEBB821FD1D61001F0D39 /* Info.plist */,
+			);
+			path = "jira-work-log";
+			sourceTree = "<group>";
+		};
+		B2FAEBC021FD1D61001F0D39 /* jira-work-logTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBC121FD1D61001F0D39 /* jira_work_logTests.swift */,
+				B2FAEBC321FD1D61001F0D39 /* Info.plist */,
+			);
+			path = "jira-work-logTests";
+			sourceTree = "<group>";
+		};
+		B2FAEBCB21FD1D61001F0D39 /* jira-work-logUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBCC21FD1D61001F0D39 /* jira_work_logUITests.swift */,
+				B2FAEBCE21FD1D61001F0D39 /* Info.plist */,
+			);
+			path = "jira-work-logUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2FAEBA821FD1D5F001F0D39 /* jira-work-log */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FAEBD121FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-log" */;
+			buildPhases = (
+				B2FAEBA521FD1D5F001F0D39 /* Sources */,
+				B2FAEBA621FD1D5F001F0D39 /* Frameworks */,
+				B2FAEBA721FD1D5F001F0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jira-work-log";
+			productName = "jira-work-log";
+			productReference = B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2FAEBBC21FD1D61001F0D39 /* jira-work-logTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FAEBD421FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logTests" */;
+			buildPhases = (
+				B2FAEBB921FD1D61001F0D39 /* Sources */,
+				B2FAEBBA21FD1D61001F0D39 /* Frameworks */,
+				B2FAEBBB21FD1D61001F0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2FAEBBF21FD1D61001F0D39 /* PBXTargetDependency */,
+			);
+			name = "jira-work-logTests";
+			productName = "jira-work-logTests";
+			productReference = B2FAEBBD21FD1D61001F0D39 /* jira-work-logTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B2FAEBC721FD1D61001F0D39 /* jira-work-logUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2FAEBD721FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logUITests" */;
+			buildPhases = (
+				B2FAEBC421FD1D61001F0D39 /* Sources */,
+				B2FAEBC521FD1D61001F0D39 /* Frameworks */,
+				B2FAEBC621FD1D61001F0D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2FAEBCA21FD1D61001F0D39 /* PBXTargetDependency */,
+			);
+			name = "jira-work-logUITests";
+			productName = "jira-work-logUITests";
+			productReference = B2FAEBC821FD1D61001F0D39 /* jira-work-logUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2FAEBA121FD1D5F001F0D39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Fernando Luna";
+				TargetAttributes = {
+					B2FAEBA821FD1D5F001F0D39 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B2FAEBBC21FD1D61001F0D39 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B2FAEBA821FD1D5F001F0D39;
+					};
+					B2FAEBC721FD1D61001F0D39 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B2FAEBA821FD1D5F001F0D39;
+					};
+				};
+			};
+			buildConfigurationList = B2FAEBA421FD1D5F001F0D39 /* Build configuration list for PBXProject "jira-work-log" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2FAEBA021FD1D5F001F0D39;
+			productRefGroup = B2FAEBAA21FD1D5F001F0D39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2FAEBA821FD1D5F001F0D39 /* jira-work-log */,
+				B2FAEBBC21FD1D61001F0D39 /* jira-work-logTests */,
+				B2FAEBC721FD1D61001F0D39 /* jira-work-logUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2FAEBA721FD1D5F001F0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */,
+				B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */,
+				B2FAEBB221FD1D5F001F0D39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBBB21FD1D61001F0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBC621FD1D61001F0D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2FAEBA521FD1D5F001F0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FAEBAF21FD1D5F001F0D39 /* ViewController.swift in Sources */,
+				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBB921FD1D61001F0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FAEBC221FD1D61001F0D39 /* jira_work_logTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2FAEBC421FD1D61001F0D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FAEBCD21FD1D61001F0D39 /* jira_work_logUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2FAEBBF21FD1D61001F0D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2FAEBA821FD1D5F001F0D39 /* jira-work-log */;
+			targetProxy = B2FAEBBE21FD1D61001F0D39 /* PBXContainerItemProxy */;
+		};
+		B2FAEBCA21FD1D61001F0D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2FAEBA821FD1D5F001F0D39 /* jira-work-log */;
+			targetProxy = B2FAEBC921FD1D61001F0D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FAEBB121FD1D5F001F0D39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2FAEBB621FD1D61001F0D39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2FAEBCF21FD1D61001F0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B2FAEBD021FD1D61001F0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2FAEBD221FD1D61001F0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-log/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-log";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2FAEBD321FD1D61001F0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-log/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-log";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B2FAEBD521FD1D61001F0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-logTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-logTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jira-work-log.app/jira-work-log";
+			};
+			name = Debug;
+		};
+		B2FAEBD621FD1D61001F0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-logTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-logTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/jira-work-log.app/jira-work-log";
+			};
+			name = Release;
+		};
+		B2FAEBD821FD1D61001F0D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-logUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-logUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "jira-work-log";
+			};
+			name = Debug;
+		};
+		B2FAEBD921FD1D61001F0D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				INFOPLIST_FILE = "jira-work-logUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-logUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "jira-work-log";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2FAEBA421FD1D5F001F0D39 /* Build configuration list for PBXProject "jira-work-log" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FAEBCF21FD1D61001F0D39 /* Debug */,
+				B2FAEBD021FD1D61001F0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FAEBD121FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-log" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FAEBD221FD1D61001F0D39 /* Debug */,
+				B2FAEBD321FD1D61001F0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FAEBD421FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FAEBD521FD1D61001F0D39 /* Debug */,
+				B2FAEBD621FD1D61001F0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2FAEBD721FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2FAEBD821FD1D61001F0D39 /* Debug */,
+				B2FAEBD921FD1D61001F0D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2FAEBA121FD1D5F001F0D39 /* Project object */;
+}
