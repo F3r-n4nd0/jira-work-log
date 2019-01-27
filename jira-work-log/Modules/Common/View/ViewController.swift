@@ -23,13 +23,13 @@ class ViewController:  UIViewController, NVActivityIndicatorViewable {
     
     func showErrorMessage(message: String) {
         executeInMainThread {
-            SCLAlertView().showError(message, subTitle: "Error")
+            SCLAlertView().showError("Error", subTitle: message)
         }
     }
     
     func showInfoMessage(message: String) {
         executeInMainThread {
-            SCLAlertView().showInfo(message, subTitle: "Info")
+            SCLAlertView().showInfo("Info", subTitle: message)
         }
     }
     
