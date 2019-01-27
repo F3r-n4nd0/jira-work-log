@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		155A71ED18FAB4CDBE7FCEFA /* Pods_jira_work_log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD7674563C636ECA75A8467 /* Pods_jira_work_log.framework */; };
-		A24EA0A5B949943DBA6B415F /* Pods_jira_work_logTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A729DA88897273A886BF8F7 /* Pods_jira_work_logTests.framework */; };
+		B298C62721FE4116008CC401 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62621FE4116008CC401 /* Result.swift */; };
+		B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62821FE412F008CC401 /* SimpleResult.swift */; };
+		B298C62B21FE4479008CC401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62A21FE4479008CC401 /* ViewController.swift */; };
 		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
-		B2FAEBAF21FD1D5F001F0D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */; };
-		B2FAEBB221FD1D5F001F0D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */; };
 		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
 		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
-		BE63A37DE896FA30EC52E76B /* Pods_jira_work_logUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB12CA26F6FCBEAFEE829C68 /* Pods_jira_work_logUITests.framework */; };
+		B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBDF21FD2E4A001F0D39 /* LoginRouter.swift */; };
+		B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBE221FD2F3B001F0D39 /* LoginStoryboard.storyboard */; };
+		B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBE421FD3FBD001F0D39 /* LoginViewController.swift */; };
+		B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBE721FD403E001F0D39 /* LoginPresenter.swift */; };
+		B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBEA21FD40D1001F0D39 /* LoginInteractor.swift */; };
+		B2FAEBF121FD4394001F0D39 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBF021FD4394001F0D39 /* R.generated.swift */; };
+		B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBF421FD4445001F0D39 /* ViewWithBorderRoundCorner.swift */; };
+		B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBF821FD481E001F0D39 /* StartStoryboard.storyboard */; };
+		B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBFA21FD4854001F0D39 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,21 +43,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02C17FD8E587FD491AE48E89 /* Pods-jira-work-logUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-logUITests.release.xcconfig"; path = "Target Support Files/Pods-jira-work-logUITests/Pods-jira-work-logUITests.release.xcconfig"; sourceTree = "<group>"; };
-		03D6EA4320B6031A207164A5 /* Pods-jira-work-logTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-logTests.debug.xcconfig"; path = "Target Support Files/Pods-jira-work-logTests/Pods-jira-work-logTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A729DA88897273A886BF8F7 /* Pods_jira_work_logTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jira_work_logTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F9505CD1F7670F31F0E83F3 /* Pods-jira-work-logTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-logTests.release.xcconfig"; path = "Target Support Files/Pods-jira-work-logTests/Pods-jira-work-logTests.release.xcconfig"; sourceTree = "<group>"; };
-		A5AEB089858A7BEB4D58BC18 /* Pods-jira-work-logUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-logUITests.debug.xcconfig"; path = "Target Support Files/Pods-jira-work-logUITests/Pods-jira-work-logUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0DC965B7971DB8FDC2F70EE /* Pods-jira-work-log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-log.debug.xcconfig"; path = "Target Support Files/Pods-jira-work-log/Pods-jira-work-log.debug.xcconfig"; sourceTree = "<group>"; };
+		B298C62621FE4116008CC401 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B298C62821FE412F008CC401 /* SimpleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResult.swift; sourceTree = "<group>"; };
+		B298C62A21FE4479008CC401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2FAEBB121FD1D5F001F0D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2FAEBB621FD1D61001F0D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2FAEBB821FD1D61001F0D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2FAEBBD21FD1D61001F0D39 /* jira-work-logTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jira-work-logTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBC821FD1D61001F0D39 /* jira-work-logUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "jira-work-logUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FAEBDF21FD2E4A001F0D39 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		B2FAEBE221FD2F3B001F0D39 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		B2FAEBE421FD3FBD001F0D39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B2FAEBE721FD403E001F0D39 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B2FAEBEA21FD40D1001F0D39 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B2FAEBF021FD4394001F0D39 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B2FAEBF421FD4445001F0D39 /* ViewWithBorderRoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithBorderRoundCorner.swift; sourceTree = "<group>"; };
+		B2FAEBF821FD481E001F0D39 /* StartStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartStoryboard.storyboard; sourceTree = "<group>"; };
+		B2FAEBFA21FD4854001F0D39 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CB12CA26F6FCBEAFEE829C68 /* Pods_jira_work_logUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jira_work_logUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD7674563C636ECA75A8467 /* Pods_jira_work_log.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jira_work_log.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE02E285D16905FB42B3FCC7 /* Pods-jira-work-log.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-log.release.xcconfig"; path = "Target Support Files/Pods-jira-work-log/Pods-jira-work-log.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A24EA0A5B949943DBA6B415F /* Pods_jira_work_logTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE63A37DE896FA30EC52E76B /* Pods_jira_work_logUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,15 @@
 				CB12CA26F6FCBEAFEE829C68 /* Pods_jira_work_logUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B298C61F21FDFA45008CC401 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B298C62621FE4116008CC401 /* Result.swift */,
+				B298C62821FE412F008CC401 /* SimpleResult.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		B2FAEBA021FD1D5F001F0D39 = {
@@ -119,8 +140,6 @@
 				B2FAEBDC21FD25F3001F0D39 /* Modules */,
 				B2FAEBDB21FD25B5001F0D39 /* Resources */,
 				B2FAEBDA21FD2578001F0D39 /* Application */,
-				B2FAEBAE21FD1D5F001F0D39 /* ViewController.swift */,
-				B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */,
 				B2FAEBB821FD1D61001F0D39 /* Info.plist */,
 			);
 			path = "jira-work-log";
@@ -137,6 +156,7 @@
 		B2FAEBDB21FD25B5001F0D39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B2FAEBF021FD4394001F0D39 /* R.generated.swift */,
 				B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */,
 				B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */,
 			);
@@ -146,8 +166,90 @@
 		B2FAEBDC21FD25F3001F0D39 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B2FAEBF621FD47E3001F0D39 /* Start */,
+				B2FAEBF221FD4419001F0D39 /* Common */,
+				B2FAEBDD21FD2D29001F0D39 /* Login */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		B2FAEBDD21FD2D29001F0D39 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBE921FD40C3001F0D39 /* Interactor */,
+				B2FAEBE621FD4023001F0D39 /* Presenter */,
+				B2FAEBE121FD2E7E001F0D39 /* View */,
+				B2FAEBDE21FD2DD8001F0D39 /* Router */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B2FAEBDE21FD2DD8001F0D39 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBDF21FD2E4A001F0D39 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B2FAEBE121FD2E7E001F0D39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBE421FD3FBD001F0D39 /* LoginViewController.swift */,
+				B2FAEBE221FD2F3B001F0D39 /* LoginStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2FAEBE621FD4023001F0D39 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBE721FD403E001F0D39 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B2FAEBE921FD40C3001F0D39 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBEA21FD40D1001F0D39 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B2FAEBF221FD4419001F0D39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B298C61F21FDFA45008CC401 /* Interactor */,
+				B2FAEBF321FD4420001F0D39 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B2FAEBF321FD4420001F0D39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBF421FD4445001F0D39 /* ViewWithBorderRoundCorner.swift */,
+				B298C62A21FE4479008CC401 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2FAEBF621FD47E3001F0D39 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBF721FD480B001F0D39 /* View */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		B2FAEBF721FD480B001F0D39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2FAEBFA21FD4854001F0D39 /* StartViewController.swift */,
+				B2FAEBF821FD481E001F0D39 /* StartStoryboard.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DA5EB5B3B48190C410133CB4 /* Pods */ = {
@@ -155,12 +257,7 @@
 			children = (
 				B0DC965B7971DB8FDC2F70EE /* Pods-jira-work-log.debug.xcconfig */,
 				DE02E285D16905FB42B3FCC7 /* Pods-jira-work-log.release.xcconfig */,
-				03D6EA4320B6031A207164A5 /* Pods-jira-work-logTests.debug.xcconfig */,
-				5F9505CD1F7670F31F0E83F3 /* Pods-jira-work-logTests.release.xcconfig */,
-				A5AEB089858A7BEB4D58BC18 /* Pods-jira-work-logUITests.debug.xcconfig */,
-				02C17FD8E587FD491AE48E89 /* Pods-jira-work-logUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,6 +269,7 @@
 			buildConfigurationList = B2FAEBD121FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-log" */;
 			buildPhases = (
 				4750CC81D9580773DB480F47 /* [CP] Check Pods Manifest.lock */,
+				B2FAEBED21FD4207001F0D39 /* Run Script R.Swift */,
 				B2FAEBA521FD1D5F001F0D39 /* Sources */,
 				B2FAEBA621FD1D5F001F0D39 /* Frameworks */,
 				B2FAEBA721FD1D5F001F0D39 /* Resources */,
@@ -190,7 +288,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2FAEBD421FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logTests" */;
 			buildPhases = (
-				AE008C808AA20B41AE7D614F /* [CP] Check Pods Manifest.lock */,
 				B2FAEBB921FD1D61001F0D39 /* Sources */,
 				B2FAEBBA21FD1D61001F0D39 /* Frameworks */,
 				B2FAEBBB21FD1D61001F0D39 /* Resources */,
@@ -209,7 +306,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2FAEBD721FD1D61001F0D39 /* Build configuration list for PBXNativeTarget "jira-work-logUITests" */;
 			buildPhases = (
-				47E642AA49738310391A1398 /* [CP] Check Pods Manifest.lock */,
 				B2FAEBC421FD1D61001F0D39 /* Sources */,
 				B2FAEBC521FD1D61001F0D39 /* Frameworks */,
 				B2FAEBC621FD1D61001F0D39 /* Resources */,
@@ -274,7 +370,8 @@
 			files = (
 				B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */,
 				B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */,
-				B2FAEBB221FD1D5F001F0D39 /* Main.storyboard in Resources */,
+				B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */,
+				B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,28 +414,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47E642AA49738310391A1398 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-jira-work-logUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8FC77D9A17B9C0605B39F966 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,24 +423,30 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE008C808AA20B41AE7D614F /* [CP] Check Pods Manifest.lock */ = {
+		B2FAEBED21FD4207001F0D39 /* Run Script R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,19 +454,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"$TEMP_DIR/rswift-lastrun",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "Run Script R.Swift";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-jira-work-logTests-checkManifestLockResult.txt",
+				"$SRCROOT/jira-work-log/Resources/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/jira-work-log/Resources/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -394,8 +473,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2FAEBAF21FD1D5F001F0D39 /* ViewController.swift in Sources */,
+				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
+				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
+				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
+				B2FAEBF121FD4394001F0D39 /* R.generated.swift in Sources */,
+				B298C62B21FE4479008CC401 /* ViewController.swift in Sources */,
+				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
 				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
+				B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */,
+				B298C62721FE4116008CC401 /* Result.swift in Sources */,
+				B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */,
+				B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,14 +517,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2FAEBB021FD1D5F001F0D39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2FAEBB121FD1D5F001F0D39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -604,7 +684,6 @@
 		};
 		B2FAEBD521FD1D61001F0D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03D6EA4320B6031A207164A5 /* Pods-jira-work-logTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -626,7 +705,6 @@
 		};
 		B2FAEBD621FD1D61001F0D39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F9505CD1F7670F31F0E83F3 /* Pods-jira-work-logTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -648,7 +726,6 @@
 		};
 		B2FAEBD821FD1D61001F0D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5AEB089858A7BEB4D58BC18 /* Pods-jira-work-logUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -669,7 +746,6 @@
 		};
 		B2FAEBD921FD1D61001F0D39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02C17FD8E587FD491AE48E89 /* Pods-jira-work-logUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

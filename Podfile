@@ -8,15 +8,7 @@ target 'jira-work-log' do
   # Pods for jira-work-log
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
-
-  target 'jira-work-logTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'jira-work-logUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'R.swift'
+  pod 'NVActivityIndicatorView'
+  pod 'SCLAlertView'
 end

@@ -1,25 +1,43 @@
 PODS:
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SCLAlertView (0.8)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
+  - R.swift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SCLAlertView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - NVActivityIndicatorView
+    - R.swift
+    - R.swift.Library
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SCLAlertView
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 5e633a857e386c106d6d9a6176054dc1c769b640
+PODFILE CHECKSUM: 7deefe9c12922cd966dd543b1da968c0dc7aa856
 
 COCOAPODS: 1.6.0.beta.2
