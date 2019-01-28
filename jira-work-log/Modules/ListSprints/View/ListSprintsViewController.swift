@@ -1,5 +1,5 @@
 //
-//  ListVertionsViewController.swift
+//  ListSprintsViewController.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ListVertionsViewController: ViewController {
+class ListSprintsViewController: ViewController {
 
-    internal var presenter: ListVersionsPresenter!
+    internal var presenter: ListSprintsPresenter!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,7 @@ class ListVertionsViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(R.nib.versionTableViewCell)
+        tableView.register(R.nib.sprintTableViewCell)
         subscribeTable()
         subscribeLoading()
         subscribeNotification()
@@ -28,12 +28,12 @@ class ListVertionsViewController: ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.getVersions()
+        presenter.getSprints()
     }
     
     func subscribeTable() {
-        presenter.versions.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: R.nib.versionTableViewCell.name, cellType: VersionTableViewCell.self)) { (row, element, cell) in
+        presenter.sprints.asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: R.nib.sprintTableViewCell.name, cellType: SprintTableViewCell.self)) { (row, element, cell) in
             cell.textLabel?.text = element.name
             }
             .disposed(by: disposeBag)

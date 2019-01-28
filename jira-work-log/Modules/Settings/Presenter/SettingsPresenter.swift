@@ -27,7 +27,11 @@ class SettingsPresenter {
         router.selectProject { [weak self] (result) in
             switch result {
             case .success(let project):
-                self?.settings.value.project = project
+                if self?.settings.value.project?.id != project.id {
+                    self?.settings.value.project = project
+                    self?.settings.value.version = nil
+                    self?.settings.value.sprint = nil
+                }
             case .failure(let error):
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }
@@ -52,10 +56,10 @@ class SettingsPresenter {
         guard let project = settings.value.project else {
             return
         }
-        router.selectVersion(project: project) { [weak self] (result) in
+        router.selectSprint(project: project) { [weak self] (result) in
             switch result {
-            case .success(let version):
-                self?.settings.value.version = version
+            case .success(let sprint):
+                self?.settings.value.sprint = sprint
             case .failure(let error):
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }

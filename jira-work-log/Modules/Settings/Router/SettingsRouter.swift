@@ -67,4 +67,24 @@ class SettingsRouter : Router {
             }.disposed(by: disposeBag)
     }
     
+    func selectSprint(project: JIRAProject ,callBack: @escaping (Result<JIRASprint>) -> Void) {
+        let listSprintRouter = ListSprintsRouter.assembleModule(project: project)
+        executeInMainThread {
+            view?.navigationController?.pushViewController(listSprintRouter.view!, animated: true)
+        }
+        listSprintRouter.publishRouter.subscribe { [weak self] (event) in
+            switch event {
+            case .next(let sprint):
+                callBack(Result.success(result: sprint))
+                break
+            case .error(let error):
+                callBack(Result.failure(error: error))
+                break
+            case .completed:
+                self?.view?.navigationController?.popViewController(animated: true)
+                break
+            }
+            }.disposed(by: disposeBag)
+    }
+    
 }

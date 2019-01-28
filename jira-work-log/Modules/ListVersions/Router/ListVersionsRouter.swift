@@ -27,7 +27,7 @@ class ListVersionsRouter : Router {
         return router
     }
     
-    func returnProject(version: JIRAVersion) {
+    func returnVersion(version: JIRAVersion) {
         publishRouter.onNext(version)
         publishRouter.onCompleted()
     }

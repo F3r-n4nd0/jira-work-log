@@ -51,10 +51,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `ProjectTableViewCell`.
     static let projectTableViewCell = _R.nib._ProjectTableViewCell()
+    /// Nib `SprintTableViewCell`.
+    static let sprintTableViewCell = _R.nib._SprintTableViewCell()
     /// Nib `VersionTableViewCell`.
     static let versionTableViewCell = _R.nib._VersionTableViewCell()
     
@@ -62,6 +64,12 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.projectTableViewCell) instead")
     static func projectTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.projectTableViewCell)
+    }
+    
+    /// `UINib(name: "SprintTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.sprintTableViewCell) instead")
+    static func sprintTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.sprintTableViewCell)
     }
     
     /// `UINib(name: "VersionTableViewCell", in: bundle)`
@@ -74,6 +82,10 @@ struct R: Rswift.Validatable {
       return R.nib.projectTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProjectTableViewCell
     }
     
+    static func sprintTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SprintTableViewCell? {
+      return R.nib.sprintTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SprintTableViewCell
+    }
+    
     static func versionTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> VersionTableViewCell? {
       return R.nib.versionTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? VersionTableViewCell
     }
@@ -81,20 +93,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `ProjectTableViewCell`.
     static let projectTableViewCell: Rswift.ReuseIdentifier<ProjectTableViewCell> = Rswift.ReuseIdentifier(identifier: "ProjectTableViewCell")
+    /// Reuse identifier `SprintTableViewCell`.
+    static let sprintTableViewCell: Rswift.ReuseIdentifier<SprintTableViewCell> = Rswift.ReuseIdentifier(identifier: "SprintTableViewCell")
+    /// Reuse identifier `VersionTableViewCell`.
+    static let versionTableViewCell: Rswift.ReuseIdentifier<VersionTableViewCell> = Rswift.ReuseIdentifier(identifier: "VersionTableViewCell")
     
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `ListProjectsStoryboard`.
     static let listProjectsStoryboard = _R.storyboard.listProjectsStoryboard()
+    /// Storyboard `ListSprintsStoryboard`.
+    static let listSprintsStoryboard = _R.storyboard.listSprintsStoryboard()
     /// Storyboard `ListVertionsStoryboard`.
     static let listVertionsStoryboard = _R.storyboard.listVertionsStoryboard()
     /// Storyboard `LoginStoryboard`.
@@ -112,6 +130,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "ListProjectsStoryboard", bundle: ...)`
     static func listProjectsStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.listProjectsStoryboard)
+    }
+    
+    /// `UIStoryboard(name: "ListSprintsStoryboard", bundle: ...)`
+    static func listSprintsStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.listSprintsStoryboard)
     }
     
     /// `UIStoryboard(name: "ListVertionsStoryboard", bundle: ...)`
@@ -170,8 +193,25 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _VersionTableViewCell: Rswift.NibResourceType {
+    struct _SprintTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = SprintTableViewCell
+      
       let bundle = R.hostingBundle
+      let identifier = "SprintTableViewCell"
+      let name = "SprintTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SprintTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SprintTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _VersionTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = VersionTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "VersionTableViewCell"
       let name = "VersionTableViewCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> VersionTableViewCell? {
@@ -188,6 +228,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try launchScreen.validate()
       try listProjectsStoryboard.validate()
+      try listSprintsStoryboard.validate()
       try listVertionsStoryboard.validate()
       try loginStoryboard.validate()
       try settingsStoryboard.validate()
@@ -223,6 +264,25 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'ListProjectsStoryboard', but couldn't be loaded.") }
         }
         if _R.storyboard.listProjectsStoryboard().listProjectsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'listProjectsViewController' could not be loaded from storyboard 'ListProjectsStoryboard' as 'ListProjectsViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct listSprintsStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let listSprintsViewController = StoryboardViewControllerResource<ListSprintsViewController>(identifier: "ListSprintsViewController")
+      let name = "ListSprintsStoryboard"
+      
+      func listSprintsViewController(_: Void = ()) -> ListSprintsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: listSprintsViewController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'ListSprintsStoryboard', but couldn't be loaded.") }
+        }
+        if _R.storyboard.listSprintsStoryboard().listSprintsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'listSprintsViewController' could not be loaded from storyboard 'ListSprintsStoryboard' as 'ListSprintsViewController'.") }
       }
       
       fileprivate init() {}

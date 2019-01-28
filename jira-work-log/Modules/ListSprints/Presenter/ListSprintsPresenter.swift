@@ -1,5 +1,5 @@
 //
-//  ListVersionsPresenter.swift
+//  ListSprintsPresenter.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -9,15 +9,15 @@
 import Foundation
 import RxSwift
 
-class ListVersionsPresenter {
+class ListSprintsPresenter {
     
-    var router: ListVersionsRouter!
-    var interactor: ListVersionsInteractor!
+    var router: ListSprintsRouter!
+    var interactor: ListSprintsInteractor!
     
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
     
-    let versions = Variable<[JIRAVersion]>([])
+    let sprints = Variable<[JIRASprint]>([])
     
     private var domain: String
     private var project: JIRAProject
@@ -27,13 +27,13 @@ class ListVersionsPresenter {
         self.project = project
     }
     
-    func getVersions() {
+    func getSprints() {
         publishLoading.onNext(true)
-        interactor.getAllVersions(domain: domain, project: project ) { [weak self] (result) in
+        interactor.getAllSprints(domain: domain, project: project ) { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):
-                self?.versions.value = result
+                self?.sprints.value = result
             case .failure(let error):
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }
@@ -41,8 +41,8 @@ class ListVersionsPresenter {
     }
     
     func selectIndexPath(index: IndexPath) {
-        let version = versions.value[index.row]
-        router.returnVersion(version: version)
+        let sprint = sprints.value[index.row]
+        router.returnSprint(sprint: sprint)
     }
     
     func cancel() {

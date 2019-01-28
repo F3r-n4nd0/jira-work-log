@@ -12,6 +12,6 @@ import Foundation
 public struct Settings: Codable {
     public var project: JIRAProject?
     public var version: JIRAVersion?
-    public var sprint: JIRAProject?
+    public var sprint: JIRASprint?
 }
 
