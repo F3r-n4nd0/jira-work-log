@@ -1,20 +1,20 @@
 //
-//  ListVersionsInteractor.swift
+//  BoardInteractor.swift
 //  jira-work-log
 //
-//  Created by Fernando Luna on 1/27/19.
+//  Created by Fernando Luna on 1/28/19.
 //  Copyright © 2019 Fernando Luna. All rights reserved.
 //
 
 import Foundation
 
-class ListSprintsInteractor {
+class BoardInteractor {
     
-    func getAllSprints(domain: String, project: JIRAProject,  callBack: @escaping (Result<[JIRASprint]>) -> Void) {
+    func getAllIssues(domain: String, settings: Settings,  callBack: @escaping (Result<[JIRAIssue]>) -> Void) {
         let headers = [
             "cache-control": "no-cache",
-        ]
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/agile/1.0/board?projectKeyOrId=\(project.id ?? "")&type=scrum")! as URL,
+            ]
+        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/agile/1.0/board/\(settings.sprint?.id ?? 0)/issue?boardId=\(settings.sprint?.id ?? 0)")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -31,8 +31,8 @@ class ListSprintsInteractor {
                 return
             }
             do {
-                let response = try JSONDecoder().decode(JIRAResponseBoard.self, from: data!)
-                callBack(Result.success(result: response.values))
+                let response = try JSONDecoder().decode(JIRAResponseIssuesBoard.self, from: data!)
+                callBack(Result.success(result: response.issues))
                 return
             } catch let error {
                 callBack(Result.failure(error: error))

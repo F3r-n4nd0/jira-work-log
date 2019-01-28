@@ -15,12 +15,13 @@ class SettingsPresenter {
     
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
-    let settings = Variable<Settings>(Settings())
+    let settings: Variable<Settings>
     
     private let domain: String
         
-    init(domain: String) {
+    init(domain: String,settings: Settings) {
         self.domain = domain
+        self.settings = Variable<Settings>(settings)
     }
     
     func selectProject() {
@@ -64,6 +65,10 @@ class SettingsPresenter {
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }
         }
+    }
+    
+    func selectDone() {
+        router.selectDone(settings: settings.value)
     }
     
 }

@@ -5,6 +5,7 @@
 
 import Foundation
 import Rswift
+import SideMenu
 import UIKit
 
 /// This `R` struct is generated and contains references to static resources.
@@ -51,14 +52,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `IssueTableViewCell`.
+    static let issueTableViewCell = _R.nib._IssueTableViewCell()
     /// Nib `ProjectTableViewCell`.
     static let projectTableViewCell = _R.nib._ProjectTableViewCell()
     /// Nib `SprintTableViewCell`.
     static let sprintTableViewCell = _R.nib._SprintTableViewCell()
     /// Nib `VersionTableViewCell`.
     static let versionTableViewCell = _R.nib._VersionTableViewCell()
+    
+    /// `UINib(name: "IssueTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.issueTableViewCell) instead")
+    static func issueTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.issueTableViewCell)
+    }
     
     /// `UINib(name: "ProjectTableViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.projectTableViewCell) instead")
@@ -78,6 +87,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.versionTableViewCell)
     }
     
+    static func issueTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IssueTableViewCell? {
+      return R.nib.issueTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IssueTableViewCell
+    }
+    
     static func projectTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProjectTableViewCell? {
       return R.nib.projectTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProjectTableViewCell
     }
@@ -93,8 +106,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `IssueTableViewCell`.
+    static let issueTableViewCell: Rswift.ReuseIdentifier<IssueTableViewCell> = Rswift.ReuseIdentifier(identifier: "IssueTableViewCell")
     /// Reuse identifier `ProjectTableViewCell`.
     static let projectTableViewCell: Rswift.ReuseIdentifier<ProjectTableViewCell> = Rswift.ReuseIdentifier(identifier: "ProjectTableViewCell")
     /// Reuse identifier `SprintTableViewCell`.
@@ -105,8 +120,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 7 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 8 storyboards.
   struct storyboard {
+    /// Storyboard `BoardStoryboard`.
+    static let boardStoryboard = _R.storyboard.boardStoryboard()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `ListProjectsStoryboard`.
@@ -121,6 +138,11 @@ struct R: Rswift.Validatable {
     static let settingsStoryboard = _R.storyboard.settingsStoryboard()
     /// Storyboard `StartStoryboard`.
     static let startStoryboard = _R.storyboard.startStoryboard()
+    
+    /// `UIStoryboard(name: "BoardStoryboard", bundle: ...)`
+    static func boardStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.boardStoryboard)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -179,6 +201,20 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _IssueTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = IssueTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "IssueTableViewCell"
+      let name = "IssueTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IssueTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IssueTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _ProjectTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
       typealias ReusableType = ProjectTableViewCell
       
@@ -226,6 +262,7 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try boardStoryboard.validate()
       try launchScreen.validate()
       try listProjectsStoryboard.validate()
       try listSprintsStoryboard.validate()
@@ -233,6 +270,31 @@ struct _R: Rswift.Validatable {
       try loginStoryboard.validate()
       try settingsStoryboard.validate()
       try startStoryboard.validate()
+    }
+    
+    struct boardStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let boardViewController = StoryboardViewControllerResource<BoardViewController>(identifier: "BoardViewController")
+      let bundle = R.hostingBundle
+      let name = "BoardStoryboard"
+      let uiSideMenuNavigationController = StoryboardViewControllerResource<SideMenu.UISideMenuNavigationController>(identifier: "UISideMenuNavigationController")
+      
+      func boardViewController(_: Void = ()) -> BoardViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: boardViewController)
+      }
+      
+      func uiSideMenuNavigationController(_: Void = ()) -> SideMenu.UISideMenuNavigationController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: uiSideMenuNavigationController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'BoardStoryboard', but couldn't be loaded.") }
+        }
+        if _R.storyboard.boardStoryboard().boardViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'boardViewController' could not be loaded from storyboard 'BoardStoryboard' as 'BoardViewController'.") }
+        if _R.storyboard.boardStoryboard().uiSideMenuNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'uiSideMenuNavigationController' could not be loaded from storyboard 'BoardStoryboard' as 'SideMenu.UISideMenuNavigationController'.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

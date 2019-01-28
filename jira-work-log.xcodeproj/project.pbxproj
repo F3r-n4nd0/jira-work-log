@@ -42,6 +42,18 @@
 		B298C68421FEB688008CC401 /* ListSprintsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67B21FEB688008CC401 /* ListSprintsInteractor.swift */; };
 		B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */; };
 		B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */; };
+		B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */; };
+		B298C68D21FEC395008CC401 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68C21FEC395008CC401 /* BoardViewController.swift */; };
+		B298C69121FEC3CD008CC401 /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68F21FEC3CD008CC401 /* IssueTableViewCell.swift */; };
+		B298C69221FEC3CD008CC401 /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C69021FEC3CD008CC401 /* IssueTableViewCell.xib */; };
+		B298C69421FEC3E5008CC401 /* BoardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C69321FEC3E5008CC401 /* BoardRouter.swift */; };
+		B298C69721FEC52C008CC401 /* BoardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C69621FEC52C008CC401 /* BoardPresenter.swift */; };
+		B298C69A21FEC562008CC401 /* BoardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C69921FEC562008CC401 /* BoardInteractor.swift */; };
+		B298C69D21FEC698008CC401 /* JIRAIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C69C21FEC698008CC401 /* JIRAIssue.swift */; };
+		B298C69F21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C69E21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift */; };
+		B298C6A121FEC95C008CC401 /* JIRAIssueFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C6A021FEC95C008CC401 /* JIRAIssueFields.swift */; };
+		B298C6A321FEC98E008CC401 /* JIRATimetracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C6A221FEC98E008CC401 /* JIRATimetracking.swift */; };
+		B298C6A921FED680008CC401 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C6A821FED680008CC401 /* MenuViewController.swift */; };
 		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
 		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
 		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
@@ -110,6 +122,18 @@
 		B298C67B21FEB688008CC401 /* ListSprintsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsInteractor.swift; sourceTree = "<group>"; };
 		B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsRouter.swift; sourceTree = "<group>"; };
 		B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAResponseBoard.swift; sourceTree = "<group>"; };
+		B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoardStoryboard.storyboard; sourceTree = "<group>"; };
+		B298C68C21FEC395008CC401 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		B298C68F21FEC3CD008CC401 /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
+		B298C69021FEC3CD008CC401 /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
+		B298C69321FEC3E5008CC401 /* BoardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRouter.swift; sourceTree = "<group>"; };
+		B298C69621FEC52C008CC401 /* BoardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPresenter.swift; sourceTree = "<group>"; };
+		B298C69921FEC562008CC401 /* BoardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardInteractor.swift; sourceTree = "<group>"; };
+		B298C69C21FEC698008CC401 /* JIRAIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAIssue.swift; sourceTree = "<group>"; };
+		B298C69E21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAResponseIssuesBoard.swift; sourceTree = "<group>"; };
+		B298C6A021FEC95C008CC401 /* JIRAIssueFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAIssueFields.swift; sourceTree = "<group>"; };
+		B298C6A221FEC98E008CC401 /* JIRATimetracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRATimetracking.swift; sourceTree = "<group>"; };
+		B298C6A821FED680008CC401 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -394,6 +418,65 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		B298C68821FEC212008CC401 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				B298C69B21FEC5BA008CC401 /* Entity */,
+				B298C69821FEC556008CC401 /* Interactor */,
+				B298C69521FEC51F008CC401 /* Presenter */,
+				B298C68E21FEC3AB008CC401 /* Router */,
+				B298C68921FEC21B008CC401 /* View */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		B298C68921FEC21B008CC401 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B298C6A821FED680008CC401 /* MenuViewController.swift */,
+				B298C68C21FEC395008CC401 /* BoardViewController.swift */,
+				B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */,
+				B298C68F21FEC3CD008CC401 /* IssueTableViewCell.swift */,
+				B298C69021FEC3CD008CC401 /* IssueTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B298C68E21FEC3AB008CC401 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B298C69321FEC3E5008CC401 /* BoardRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B298C69521FEC51F008CC401 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B298C69621FEC52C008CC401 /* BoardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B298C69821FEC556008CC401 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B298C69921FEC562008CC401 /* BoardInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B298C69B21FEC5BA008CC401 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B298C69C21FEC698008CC401 /* JIRAIssue.swift */,
+				B298C69E21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift */,
+				B298C6A021FEC95C008CC401 /* JIRAIssueFields.swift */,
+				B298C6A221FEC98E008CC401 /* JIRATimetracking.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B2FAEBA021FD1D5F001F0D39 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +529,7 @@
 		B2FAEBDC21FD25F3001F0D39 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B298C68821FEC212008CC401 /* Board */,
 				B298C67021FEB688008CC401 /* ListSprints */,
 				B298C65421FE963B008CC401 /* ListVersions */,
 				B2FAEBF221FD4419001F0D39 /* Common */,
@@ -662,7 +746,9 @@
 				B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */,
 				B298C64821FE83A0008CC401 /* SettingsStoryboard.storyboard in Resources */,
 				B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */,
+				B298C69221FEC3CD008CC401 /* IssueTableViewCell.xib in Resources */,
 				B298C68021FEB688008CC401 /* ListSprintsStoryboard.storyboard in Resources */,
+				B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */,
 				B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +807,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -732,6 +819,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -772,6 +860,7 @@
 				B298C66321FEA5CF008CC401 /* ListVersionsPresenter.swift in Sources */,
 				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
 				B298C67E21FEB688008CC401 /* JIRASprint.swift in Sources */,
+				B298C69721FEC52C008CC401 /* BoardPresenter.swift in Sources */,
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
 				B298C68321FEB688008CC401 /* ListSprintsViewController.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
@@ -785,21 +874,30 @@
 				B298C62B21FE4479008CC401 /* ViewController.swift in Sources */,
 				B298C67F21FEB688008CC401 /* ListSprintsPresenter.swift in Sources */,
 				B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */,
+				B298C69121FEC3CD008CC401 /* IssueTableViewCell.swift in Sources */,
 				B298C65721FE9676008CC401 /* JIRAVersion.swift in Sources */,
 				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
 				B298C64121FE7514008CC401 /* Router.swift in Sources */,
+				B298C69F21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift in Sources */,
 				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
 				B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */,
 				B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */,
+				B298C6A321FEC98E008CC401 /* JIRATimetracking.swift in Sources */,
+				B298C6A121FEC95C008CC401 /* JIRAIssueFields.swift in Sources */,
+				B298C6A921FED680008CC401 /* MenuViewController.swift in Sources */,
 				B298C63121FE6A6C008CC401 /* ListProjectsViewController.swift in Sources */,
 				B298C62721FE4116008CC401 /* Result.swift in Sources */,
 				B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */,
+				B298C69D21FEC698008CC401 /* JIRAIssue.swift in Sources */,
 				B298C66921FEA5CF008CC401 /* ListVersionsRouter.swift in Sources */,
 				B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */,
 				B298C66821FEA5CF008CC401 /* ListVersionsInteractor.swift in Sources */,
+				B298C69421FEC3E5008CC401 /* BoardRouter.swift in Sources */,
+				B298C69A21FEC562008CC401 /* BoardInteractor.swift in Sources */,
 				B298C66621FEA5CF008CC401 /* ListVertionsViewController.swift in Sources */,
 				B298C65321FE9086008CC401 /* Settings.swift in Sources */,
 				B298C64E21FE87E1008CC401 /* SettingsPresenter.swift in Sources */,
+				B298C68D21FEC395008CC401 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

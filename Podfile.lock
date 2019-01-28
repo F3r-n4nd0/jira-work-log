@@ -11,6 +11,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SCLAlertView (0.8)
+  - SideMenu (5.0.3)
 
 DEPENDENCIES:
   - NVActivityIndicatorView
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SCLAlertView
+  - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,6 +30,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SCLAlertView
+    - SideMenu
 
 SPEC CHECKSUMS:
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
@@ -37,7 +40,8 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: 7deefe9c12922cd966dd543b1da968c0dc7aa856
+PODFILE CHECKSUM: 0d9a5f4f6f5ee5b79d0aa59155c80fedb600c854
 
 COCOAPODS: 1.6.0.beta.2

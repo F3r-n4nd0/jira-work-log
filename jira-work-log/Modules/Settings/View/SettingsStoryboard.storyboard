@@ -21,20 +21,26 @@
                             <navigationBar contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="BKp-uv-vmf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Settings" id="Vs0-Il-zYx"/>
+                                    <navigationItem title="Settings" id="Vs0-Il-zYx">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bOU-Rf-Lut">
+                                            <connections>
+                                                <action selector="selectDone:" destination="rMJ-Eg-Okp" id="ADF-MC-nm4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YR-K2-1zc" customClass="ViewWithBorderRoundCorner" customModule="jira_work_log" customModuleProvider="target">
                                 <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jes-TN-vcQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="563"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="360"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eog-0t-n2A">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="187.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="120"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8D-76-qbJ">
-                                                        <rect key="frame" x="25" y="79" width="285" height="30"/>
+                                                        <rect key="frame" x="25" y="45" width="285" height="30"/>
                                                         <gestureRecognizers/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -44,7 +50,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a project:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uT-gX-3gE">
-                                                        <rect key="frame" x="25" y="48.5" width="124.5" height="20.5"/>
+                                                        <rect key="frame" x="25" y="14.5" width="124.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -53,6 +59,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="n8D-76-qbJ" firstAttribute="leading" secondItem="Eog-0t-n2A" secondAttribute="leading" constant="25" id="4Pm-GW-WRv"/>
+                                                    <constraint firstAttribute="height" constant="120" id="5jr-V5-Yth"/>
                                                     <constraint firstItem="n8D-76-qbJ" firstAttribute="centerX" secondItem="Eog-0t-n2A" secondAttribute="centerX" id="Ajd-Mi-SSG"/>
                                                     <constraint firstItem="n8D-76-qbJ" firstAttribute="top" secondItem="6uT-gX-3gE" secondAttribute="bottom" constant="10" id="dNj-bx-Hn5"/>
                                                     <constraint firstItem="n8D-76-qbJ" firstAttribute="leading" secondItem="6uT-gX-3gE" secondAttribute="leading" id="hA6-AC-sGd"/>
@@ -61,10 +68,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNf-z4-W8W">
-                                                <rect key="frame" x="0.0" y="187.5" width="335" height="188"/>
+                                                <rect key="frame" x="0.0" y="120" width="335" height="120"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbN-iL-jQm">
-                                                        <rect key="frame" x="25" y="79" width="285" height="30"/>
+                                                        <rect key="frame" x="25" y="45" width="285" height="30"/>
                                                         <gestureRecognizers/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,7 +81,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpC-9z-23k">
-                                                        <rect key="frame" x="25" y="48.5" width="126" height="20.5"/>
+                                                        <rect key="frame" x="25" y="14.5" width="126" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -91,10 +98,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-Lb-mWB">
-                                                <rect key="frame" x="0.0" y="375.5" width="335" height="187.5"/>
+                                                <rect key="frame" x="0.0" y="240" width="335" height="120"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-GJ-Gjo">
-                                                        <rect key="frame" x="25" y="78.5" width="285" height="30"/>
+                                                        <rect key="frame" x="25" y="45" width="285" height="30"/>
                                                         <gestureRecognizers/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,7 +111,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sprint:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw8-Ia-MzA">
-                                                        <rect key="frame" x="25" y="48" width="114.5" height="20.5"/>
+                                                        <rect key="frame" x="25" y="14.5" width="114.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -128,7 +135,6 @@
                                     <constraint firstItem="Jes-TN-vcQ" firstAttribute="top" secondItem="1YR-K2-1zc" secondAttribute="top" id="5hq-TP-QOs"/>
                                     <constraint firstAttribute="trailing" secondItem="Jes-TN-vcQ" secondAttribute="trailing" id="Y4o-0v-O7P"/>
                                     <constraint firstItem="Jes-TN-vcQ" firstAttribute="leading" secondItem="1YR-K2-1zc" secondAttribute="leading" id="hwE-HO-7FD"/>
-                                    <constraint firstAttribute="bottom" secondItem="Jes-TN-vcQ" secondAttribute="bottom" id="jIU-yE-l4O"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBorder">

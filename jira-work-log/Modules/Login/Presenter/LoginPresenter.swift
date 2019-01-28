@@ -31,7 +31,7 @@ class LoginPresenter {
                 switch result {
                 case .success(let result):
                     if result {
-                        self?.router.showSettings()
+                        self?.router.showBoard()
                     } else {
                         self?.publishShowNotification.onNext(Result.success(result: "Incorrect user or password"))
                     }

@@ -27,12 +27,12 @@ class LoginRouter: Router  {
         return router
     }
     
-    func showSettings() {
-        let settingsRouter = SettingsRouter.assembleModule()
+    func showBoard() {
+        let boardRouter = BoardRouter.assembleModule(settings: Settings())
         executeInMainThread {
-            view?.navigationController?.pushViewController(settingsRouter.view!, animated: true)
+            view?.navigationController?.pushViewController(boardRouter.view!, animated: true)
         }
-        settingsRouter.publishRouter.subscribe { [weak self] (event) in
+        boardRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
             case .next(_):
                 break

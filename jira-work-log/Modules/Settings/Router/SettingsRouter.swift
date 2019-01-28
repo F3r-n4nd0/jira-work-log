@@ -15,11 +15,11 @@ class SettingsRouter : Router {
     
     private let disposeBag = DisposeBag()
     
-    let publishRouter = PublishSubject<Void>()
+    let publishRouter = PublishSubject<Settings>()
     
-    static func assembleModule() -> SettingsRouter {
+    static func assembleModule(settings: Settings) -> SettingsRouter {
         let view = R.storyboard.settingsStoryboard.settingsViewController()!
-        let presenter = SettingsPresenter(domain: "fernand0.atlassian.net")
+        let presenter = SettingsPresenter(domain: "fernand0.atlassian.net",settings: settings)
         let router = SettingsRouter()
         view.presenter = presenter
         presenter.router = router
@@ -85,6 +85,11 @@ class SettingsRouter : Router {
                 break
             }
             }.disposed(by: disposeBag)
+    }
+    
+    func selectDone(settings: Settings) {
+        publishRouter.onNext(settings)
+        publishRouter.onCompleted()
     }
     
 }

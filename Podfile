@@ -11,4 +11,5 @@ target 'jira-work-log' do
   pod 'R.swift'
   pod 'NVActivityIndicatorView'
   pod 'SCLAlertView'
+  pod 'SideMenu'
 end

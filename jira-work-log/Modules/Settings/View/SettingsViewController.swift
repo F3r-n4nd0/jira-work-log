@@ -49,4 +49,8 @@ class SettingsViewController: UIViewController {
         presenter.selectSprint()
     }
 
+    @IBAction func selectDone(_ sender: UIBarButtonItem) {
+        presenter.selectDone()
+    }
+    
 }
