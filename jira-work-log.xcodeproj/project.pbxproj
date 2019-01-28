@@ -11,6 +11,15 @@
 		B298C62721FE4116008CC401 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62621FE4116008CC401 /* Result.swift */; };
 		B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62821FE412F008CC401 /* SimpleResult.swift */; };
 		B298C62B21FE4479008CC401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62A21FE4479008CC401 /* ViewController.swift */; };
+		B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C62E21FE69CB008CC401 /* ListProjectsStoryboard.storyboard */; };
+		B298C63121FE6A6C008CC401 /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63021FE6A6C008CC401 /* ListProjectsViewController.swift */; };
+		B298C63421FE6B17008CC401 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63221FE6B17008CC401 /* ProjectTableViewCell.swift */; };
+		B298C63521FE6B17008CC401 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C63321FE6B17008CC401 /* ProjectTableViewCell.xib */; };
+		B298C63A21FE6BCE008CC401 /* ListProjectsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63921FE6BCE008CC401 /* ListProjectsPresenter.swift */; };
+		B298C63C21FE6C1D008CC401 /* ListProjectsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63B21FE6C1D008CC401 /* ListProjectsRouter.swift */; };
+		B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63D21FE6C39008CC401 /* ListProjectsInteractor.swift */; };
+		B298C64121FE7514008CC401 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64021FE7514008CC401 /* Router.swift */; };
+		B298C64421FE777C008CC401 /* JIRAProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64321FE777C008CC401 /* JIRAProject.swift */; };
 		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
 		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
 		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
@@ -48,6 +57,15 @@
 		B298C62621FE4116008CC401 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B298C62821FE412F008CC401 /* SimpleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResult.swift; sourceTree = "<group>"; };
 		B298C62A21FE4479008CC401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B298C62E21FE69CB008CC401 /* ListProjectsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProjectsStoryboard.storyboard; sourceTree = "<group>"; };
+		B298C63021FE6A6C008CC401 /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
+		B298C63221FE6B17008CC401 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
+		B298C63321FE6B17008CC401 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
+		B298C63921FE6BCE008CC401 /* ListProjectsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsPresenter.swift; sourceTree = "<group>"; };
+		B298C63B21FE6C1D008CC401 /* ListProjectsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsRouter.swift; sourceTree = "<group>"; };
+		B298C63D21FE6C39008CC401 /* ListProjectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsInteractor.swift; sourceTree = "<group>"; };
+		B298C64021FE7514008CC401 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B298C64321FE777C008CC401 /* JIRAProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAProject.swift; sourceTree = "<group>"; };
 		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +132,69 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		B298C62C21FE54FB008CC401 /* ListProjects */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64221FE7766008CC401 /* Entity */,
+				B298C63821FE6BB8008CC401 /* Router */,
+				B298C63721FE6BAE008CC401 /* Interactor */,
+				B298C63621FE6B99008CC401 /* Presenter */,
+				B298C62D21FE69B2008CC401 /* View */,
+			);
+			path = ListProjects;
+			sourceTree = "<group>";
+		};
+		B298C62D21FE69B2008CC401 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B298C63021FE6A6C008CC401 /* ListProjectsViewController.swift */,
+				B298C62E21FE69CB008CC401 /* ListProjectsStoryboard.storyboard */,
+				B298C63221FE6B17008CC401 /* ProjectTableViewCell.swift */,
+				B298C63321FE6B17008CC401 /* ProjectTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B298C63621FE6B99008CC401 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B298C63921FE6BCE008CC401 /* ListProjectsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B298C63721FE6BAE008CC401 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B298C63D21FE6C39008CC401 /* ListProjectsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B298C63821FE6BB8008CC401 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B298C63B21FE6C1D008CC401 /* ListProjectsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B298C63F21FE750E008CC401 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64021FE7514008CC401 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B298C64221FE7766008CC401 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64321FE777C008CC401 /* JIRAProject.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B2FAEBA021FD1D5F001F0D39 = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +247,9 @@
 		B2FAEBDC21FD25F3001F0D39 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B2FAEBF621FD47E3001F0D39 /* Start */,
 				B2FAEBF221FD4419001F0D39 /* Common */,
+				B2FAEBF621FD47E3001F0D39 /* Start */,
+				B298C62C21FE54FB008CC401 /* ListProjects */,
 				B2FAEBDD21FD2D29001F0D39 /* Login */,
 			);
 			path = Modules;
@@ -220,6 +302,7 @@
 		B2FAEBF221FD4419001F0D39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B298C63F21FE750E008CC401 /* Router */,
 				B298C61F21FDFA45008CC401 /* Interactor */,
 				B2FAEBF321FD4420001F0D39 /* View */,
 			);
@@ -369,9 +452,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */,
+				B298C63521FE6B17008CC401 /* ProjectTableViewCell.xib in Resources */,
 				B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */,
 				B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */,
 				B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */,
+				B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,14 +558,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B298C63C21FE6C1D008CC401 /* ListProjectsRouter.swift in Sources */,
+				B298C64421FE777C008CC401 /* JIRAProject.swift in Sources */,
 				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
+				B298C63421FE6B17008CC401 /* ProjectTableViewCell.swift in Sources */,
+				B298C63A21FE6BCE008CC401 /* ListProjectsPresenter.swift in Sources */,
 				B2FAEBF121FD4394001F0D39 /* R.generated.swift in Sources */,
 				B298C62B21FE4479008CC401 /* ViewController.swift in Sources */,
+				B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */,
 				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
+				B298C64121FE7514008CC401 /* Router.swift in Sources */,
 				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
 				B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */,
+				B298C63121FE6A6C008CC401 /* ListProjectsViewController.swift in Sources */,
 				B298C62721FE4116008CC401 /* Result.swift in Sources */,
 				B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */,
 				B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */,

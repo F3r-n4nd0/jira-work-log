@@ -17,7 +17,11 @@ class LoginPresenter {
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
     
-    let domain: String = "fernand0.atlassian.net"
+    let domain: String
+    
+    init(domain: String) {
+        self.domain = domain
+    }
     
     func initLoad(user: String, password: String) {
         do {
@@ -27,9 +31,9 @@ class LoginPresenter {
                 switch result {
                 case .success(let result):
                     if result {
-                        self?.publishShowNotification.onNext(Result.success(result: "SUCCESS"))
+                        self?.router.showListProjects()
                     } else {
-                         self?.publishShowNotification.onNext(Result.success(result: "FAIL"))
+                        self?.publishShowNotification.onNext(Result.success(result: "Incorrect user or password"))
                     }
                 case .failure(let error):
                     self?.publishShowNotification.onNext(Result.failure(error: error))
