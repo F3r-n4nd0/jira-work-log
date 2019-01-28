@@ -22,7 +22,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subscribeSettings()
-        // Do any additional setup after loading the view.
     }
     
     func subscribeSettings() {
@@ -33,6 +32,8 @@ class SettingsViewController: UIViewController {
     
     func loadSettingsData(settings: Settings) {
         textFieldProject.text = settings.project?.name ?? ""
+        textFieldVersion.text = settings.version?.name ?? ""
+        textFieldSprint.text = settings.sprint?.name ?? ""
     }
     
     
@@ -40,14 +41,12 @@ class SettingsViewController: UIViewController {
         presenter.selectProject()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func selectTapSelectVersion(_ sender: UITapGestureRecognizer) {
+        presenter.selectVersion()
     }
-    */
+    
+    @IBAction func selectTapSelectSprint(_ sender: UITapGestureRecognizer) {
+        presenter.selectSprint()
+    }
 
 }

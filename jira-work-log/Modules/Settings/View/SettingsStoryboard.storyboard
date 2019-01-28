@@ -63,11 +63,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNf-z4-W8W">
                                                 <rect key="frame" x="0.0" y="187.5" width="335" height="188"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbN-iL-jQm">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KbN-iL-jQm">
                                                         <rect key="frame" x="25" y="79" width="285" height="30"/>
+                                                        <gestureRecognizers/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="5NU-JM-cGD" appends="YES" id="upc-rj-R6b"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a version:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpC-9z-23k">
                                                         <rect key="frame" x="25" y="48.5" width="126" height="20.5"/>
@@ -89,11 +93,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-Lb-mWB">
                                                 <rect key="frame" x="0.0" y="375.5" width="335" height="187.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-GJ-Gjo">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-GJ-Gjo">
                                                         <rect key="frame" x="25" y="78.5" width="285" height="30"/>
+                                                        <gestureRecognizers/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="oax-kg-Fbw" appends="YES" id="YcG-9D-LsI"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sprint:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw8-Ia-MzA">
                                                         <rect key="frame" x="25" y="48" width="114.5" height="20.5"/>
@@ -151,6 +159,16 @@
                 <tapGestureRecognizer id="9XH-Q5-eIK" userLabel="TapGestureRecognizerProject">
                     <connections>
                         <action selector="selectTapSelectProject:" destination="rMJ-Eg-Okp" id="lqI-6W-qNx"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5NU-JM-cGD" userLabel="TapGestureRecognizerVersion">
+                    <connections>
+                        <action selector="selectTapSelectVersion:" destination="rMJ-Eg-Okp" id="ER3-nT-TvB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oax-kg-Fbw" userLabel="TapGestureRecognizerSprint">
+                    <connections>
+                        <action selector="selectTapSelectSprint:" destination="rMJ-Eg-Okp" id="zPt-p6-uP1"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

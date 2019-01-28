@@ -1,5 +1,5 @@
 //
-//  JIRAProject.swift
+//  JIRAVersion.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-public struct JIRAProject: Codable {
+public struct JIRAVersion: Codable {
     public var id: String?
     public var name: String?
-    public var key: String?
+    public var description: String?
 }

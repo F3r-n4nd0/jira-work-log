@@ -1,5 +1,5 @@
 //
-//  ListProjectsViewController.swift
+//  ListVertionsViewController.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ListProjectsViewController: ViewController {
+class ListVertionsViewController: ViewController {
 
-    internal var presenter: ListProjectsPresenter!
+    internal var presenter: ListVersionsPresenter!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,6 +24,11 @@ class ListProjectsViewController: ViewController {
         subscribeTable()
         subscribeLoading()
         subscribeNotification()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.getVersions()
     }
     
     func subscribeTable() {
@@ -57,11 +62,6 @@ class ListProjectsViewController: ViewController {
                 self?.showErrorMessage(message: error.localizedDescription)
             }
         }).disposed(by: disposeBag)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter.getProjects()
     }
     
     @IBAction func selectCancelButton(_ sender: UIBarButtonItem) {

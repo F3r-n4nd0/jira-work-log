@@ -26,7 +26,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-PW-dHE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="zJm-aF-39Z">
+                                    <navigationItem title="Projects" id="zJm-aF-39Z">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mAX-bh-Q9e">
                                             <color key="tintColor" name="MainColor"/>
                                             <connections>

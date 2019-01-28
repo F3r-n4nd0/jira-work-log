@@ -47,4 +47,24 @@ class SettingsRouter : Router {
             }.disposed(by: disposeBag)
     }
     
+    func selectVersion(project: JIRAProject ,callBack: @escaping (Result<JIRAVersion>) -> Void) {
+        let listVersionsRouter = ListVersionsRouter.assembleModule(project: project)
+        executeInMainThread {
+            view?.navigationController?.pushViewController(listVersionsRouter.view!, animated: true)
+        }
+        listVersionsRouter.publishRouter.subscribe { [weak self] (event) in
+            switch event {
+            case .next(let version):
+                callBack(Result.success(result: version))
+                break
+            case .error(let error):
+                callBack(Result.failure(error: error))
+                break
+            case .completed:
+                self?.view?.navigationController?.popViewController(animated: true)
+                break
+            }
+            }.disposed(by: disposeBag)
+    }
+    
 }

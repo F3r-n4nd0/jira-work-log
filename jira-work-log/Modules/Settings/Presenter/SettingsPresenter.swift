@@ -34,4 +34,32 @@ class SettingsPresenter {
         }
     }
     
+    func selectVersion() {
+        guard let project = settings.value.project else {
+            return
+        }
+        router.selectVersion(project: project) { [weak self] (result) in
+            switch result {
+            case .success(let version):
+                self?.settings.value.version = version
+            case .failure(let error):
+                self?.publishShowNotification.onNext(Result.failure(error: error))
+            }
+        }
+    }
+    
+    func selectSprint() {
+        guard let project = settings.value.project else {
+            return
+        }
+        router.selectVersion(project: project) { [weak self] (result) in
+            switch result {
+            case .success(let version):
+                self?.settings.value.version = version
+            case .failure(let error):
+                self?.publishShowNotification.onNext(Result.failure(error: error))
+            }
+        }
+    }
+    
 }
