@@ -22,10 +22,43 @@ class ListProjectsViewController: ViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.register(R.nib.projectTableViewCell)
-        presenter.projects.asObservable().bind(to: tableView.rx.items(cellIdentifier: R.nib.projectTableViewCell.name  , cellType: ProjectTableViewCell.self)) { (row, element, cell) in
+        subscribeTable()
+        subscribeLoading()
+        subscribeNotification()
+    }
+    
+    func subscribeTable() {
+        presenter.projects.asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: R.nib.projectTableViewCell.name  , cellType: ProjectTableViewCell.self)) { (row, element, cell) in
             cell.textLabel?.text = element.name
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.presenter.selectIndexPath(index: indexPath)
+            }).disposed(by: disposeBag)
+    }
+    
+    func subscribeLoading() {
+        presenter.publishLoading.subscribe(onNext: { [weak self] (result) in
+            if result {
+                self?.startWaitAnimation()
+            } else {
+                self?.stopAnimating()
+            }
+        }).disposed(by: disposeBag)
+    }
+    
+    func subscribeNotification() {
+        presenter.publishShowNotification.subscribe(onNext: { [weak self] (result) in
+            switch result {
+            case .success(let message):
+                self?.showInfoMessage(message: message)
+            case .failure(let error):
+                self?.showErrorMessage(message: error.localizedDescription)
+            }
+        }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +69,6 @@ class ListProjectsViewController: ViewController {
     @IBAction func selectCancelButton(_ sender: UIBarButtonItem) {
         presenter.cancel()
     }
-    
     
     /*
     // MARK: - Navigation

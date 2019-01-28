@@ -26,7 +26,9 @@ class ListProjectsPresenter {
     }
     
     func getProjects() {
+        publishLoading.onNext(true)
         interactor.getAllProjects(domain: domain ) { [weak self] (result) in
+            self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):
                 self?.projects.value = result
@@ -34,6 +36,11 @@ class ListProjectsPresenter {
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }
         }
+    }
+    
+    func selectIndexPath(index: IndexPath) {
+        let project: JIRAProject = projects.value[index.row]
+        router.returnProject(project: project)
     }
     
     func cancel() {

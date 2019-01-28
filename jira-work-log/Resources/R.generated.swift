@@ -77,7 +77,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -85,6 +85,8 @@ struct R: Rswift.Validatable {
     static let listProjectsStoryboard = _R.storyboard.listProjectsStoryboard()
     /// Storyboard `LoginStoryboard`.
     static let loginStoryboard = _R.storyboard.loginStoryboard()
+    /// Storyboard `SettingsStoryboard`.
+    static let settingsStoryboard = _R.storyboard.settingsStoryboard()
     /// Storyboard `StartStoryboard`.
     static let startStoryboard = _R.storyboard.startStoryboard()
     
@@ -101,6 +103,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "LoginStoryboard", bundle: ...)`
     static func loginStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.loginStoryboard)
+    }
+    
+    /// `UIStoryboard(name: "SettingsStoryboard", bundle: ...)`
+    static func settingsStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.settingsStoryboard)
     }
     
     /// `UIStoryboard(name: "StartStoryboard", bundle: ...)`
@@ -152,6 +159,7 @@ struct _R: Rswift.Validatable {
       try launchScreen.validate()
       try listProjectsStoryboard.validate()
       try loginStoryboard.validate()
+      try settingsStoryboard.validate()
       try startStoryboard.validate()
     }
     
@@ -204,6 +212,24 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'LoginStoryboard', but couldn't be loaded.") }
         }
         if _R.storyboard.loginStoryboard().loginViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginViewController' could not be loaded from storyboard 'LoginStoryboard' as 'LoginViewController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct settingsStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "SettingsStoryboard"
+      let settingsViewController = StoryboardViewControllerResource<SettingsViewController>(identifier: "SettingsViewController")
+      
+      func settingsViewController(_: Void = ()) -> SettingsViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: settingsViewController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+        if _R.storyboard.settingsStoryboard().settingsViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'settingsViewController' could not be loaded from storyboard 'SettingsStoryboard' as 'SettingsViewController'.") }
       }
       
       fileprivate init() {}

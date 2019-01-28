@@ -27,22 +27,22 @@ class LoginRouter: Router  {
         return router
     }
     
-    func showListProjects() {
-        let listProjectsRouter = ListProjectsRouter.assembleModule()
+    func showSettings() {
+        let settingsRouter = SettingsRouter.assembleModule()
         executeInMainThread {
-            view?.navigationController?.pushViewController(listProjectsRouter.view!, animated: true)
+            view?.navigationController?.pushViewController(settingsRouter.view!, animated: true)
         }
-        listProjectsRouter.publishRouter.subscribe { [weak self] (event) in
+        settingsRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
-            case .next: break
-                
-            case .error(_): break
-                
+            case .next(_):
+                break
+            case .error(_):
+                break
             case .completed:
                 self?.view?.navigationController?.popViewController(animated: true)
+                break
             }
             }.disposed(by: disposeBag)
-       
     }
     
 }

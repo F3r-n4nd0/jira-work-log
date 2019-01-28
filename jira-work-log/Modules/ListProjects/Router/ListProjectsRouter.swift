@@ -13,7 +13,7 @@ class ListProjectsRouter : Router {
  
     weak var view: ListProjectsViewController?
     
-    let publishRouter = PublishSubject<Void>()
+    let publishRouter = PublishSubject<JIRAProject>()
     
     static func assembleModule() -> ListProjectsRouter {
         let view = R.storyboard.listProjectsStoryboard.listProjectsViewController()!
@@ -25,6 +25,11 @@ class ListProjectsRouter : Router {
         presenter.interactor = interactor
         router.view = view
         return router
+    }
+    
+    func returnProject(project: JIRAProject) {
+        publishRouter.onNext(project)
+        publishRouter.onCompleted()
     }
     
     func close() {

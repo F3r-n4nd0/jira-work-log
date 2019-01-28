@@ -20,6 +20,11 @@
 		B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C63D21FE6C39008CC401 /* ListProjectsInteractor.swift */; };
 		B298C64121FE7514008CC401 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64021FE7514008CC401 /* Router.swift */; };
 		B298C64421FE777C008CC401 /* JIRAProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64321FE777C008CC401 /* JIRAProject.swift */; };
+		B298C64821FE83A0008CC401 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C64721FE83A0008CC401 /* SettingsStoryboard.storyboard */; };
+		B298C64A21FE86BE008CC401 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64921FE86BE008CC401 /* SettingsViewController.swift */; };
+		B298C64E21FE87E1008CC401 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64D21FE87E1008CC401 /* SettingsPresenter.swift */; };
+		B298C65021FE88B0008CC401 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C64F21FE88B0008CC401 /* SettingsRouter.swift */; };
+		B298C65321FE9086008CC401 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C65221FE9086008CC401 /* Settings.swift */; };
 		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
 		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
 		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
@@ -66,6 +71,11 @@
 		B298C63D21FE6C39008CC401 /* ListProjectsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsInteractor.swift; sourceTree = "<group>"; };
 		B298C64021FE7514008CC401 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B298C64321FE777C008CC401 /* JIRAProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAProject.swift; sourceTree = "<group>"; };
+		B298C64721FE83A0008CC401 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		B298C64921FE86BE008CC401 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B298C64D21FE87E1008CC401 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		B298C64F21FE88B0008CC401 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		B298C65221FE9086008CC401 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +205,50 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		B298C64521FE8354008CC401 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B298C65121FE9072008CC401 /* Entity */,
+				B298C64C21FE87CC008CC401 /* Router */,
+				B298C64B21FE87C2008CC401 /* Presenter */,
+				B298C64621FE8390008CC401 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B298C64621FE8390008CC401 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64921FE86BE008CC401 /* SettingsViewController.swift */,
+				B298C64721FE83A0008CC401 /* SettingsStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B298C64B21FE87C2008CC401 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64D21FE87E1008CC401 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B298C64C21FE87CC008CC401 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B298C64F21FE88B0008CC401 /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B298C65121FE9072008CC401 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B298C65221FE9086008CC401 /* Settings.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B2FAEBA021FD1D5F001F0D39 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +305,7 @@
 				B2FAEBF621FD47E3001F0D39 /* Start */,
 				B298C62C21FE54FB008CC401 /* ListProjects */,
 				B2FAEBDD21FD2D29001F0D39 /* Login */,
+				B298C64521FE8354008CC401 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -455,6 +510,7 @@
 				B298C63521FE6B17008CC401 /* ProjectTableViewCell.xib in Resources */,
 				B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */,
 				B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */,
+				B298C64821FE83A0008CC401 /* SettingsStoryboard.storyboard in Resources */,
 				B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */,
 				B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */,
 			);
@@ -560,6 +616,8 @@
 			files = (
 				B298C63C21FE6C1D008CC401 /* ListProjectsRouter.swift in Sources */,
 				B298C64421FE777C008CC401 /* JIRAProject.swift in Sources */,
+				B298C64A21FE86BE008CC401 /* SettingsViewController.swift in Sources */,
+				B298C65021FE88B0008CC401 /* SettingsRouter.swift in Sources */,
 				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
@@ -576,6 +634,8 @@
 				B298C62721FE4116008CC401 /* Result.swift in Sources */,
 				B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */,
 				B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */,
+				B298C65321FE9086008CC401 /* Settings.swift in Sources */,
+				B298C64E21FE87E1008CC401 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
