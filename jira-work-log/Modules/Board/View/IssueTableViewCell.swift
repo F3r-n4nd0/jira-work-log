@@ -10,6 +10,12 @@ import UIKit
 
 class IssueTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var imageViewIcon: UIImageView!
+    @IBOutlet weak var labelSummary: UILabel!
+    @IBOutlet weak var labelhours: UILabel!
+    @IBOutlet weak var viewBackground: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,4 +1,5 @@
 PODS:
+  - Kingfisher (5.1.0)
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
   - NVActivityIndicatorView/Presenter (4.6.1)
@@ -12,17 +13,21 @@ PODS:
     - RxAtomic (~> 4.4)
   - SCLAlertView (0.8)
   - SideMenu (5.0.3)
+  - SwiftSVG (2.2.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - NVActivityIndicatorView
   - R.swift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SCLAlertView
   - SideMenu
+  - SwiftSVG
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - NVActivityIndicatorView
     - R.swift
     - R.swift.Library
@@ -31,8 +36,10 @@ SPEC REPOS:
     - RxSwift
     - SCLAlertView
     - SideMenu
+    - SwiftSVG
 
 SPEC CHECKSUMS:
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
@@ -41,7 +48,8 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+  SwiftSVG: 19bc4e434dcf236ece45ddf75f5ee1d3ef8061e6
 
-PODFILE CHECKSUM: 0d9a5f4f6f5ee5b79d0aa59155c80fedb600c854
+PODFILE CHECKSUM: fc8885b58fdcaa386ba84f970d0d06b04c83e319
 
 COCOAPODS: 1.6.0.beta.2

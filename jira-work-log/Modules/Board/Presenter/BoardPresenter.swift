@@ -52,4 +52,9 @@ class BoardPresenter {
         }
     }
     
+    func selectIndexPath(index: IndexPath) {
+        let issue = issues.value[index.row]
+        
+    }
+    
 }

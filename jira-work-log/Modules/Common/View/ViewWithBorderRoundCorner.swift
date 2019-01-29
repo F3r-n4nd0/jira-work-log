@@ -16,6 +16,12 @@ class ViewWithBorderRoundCorner: UIView {
         }
     }
     
+    @IBInspectable var cornerRadius: CGFloat = 0.02 {
+        didSet {
+            self.layer.cornerRadius = self.bounds.size.width * cornerRadius
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setBorderRoundCorner()
@@ -27,7 +33,7 @@ class ViewWithBorderRoundCorner: UIView {
     }
     
     func setBorderRoundCorner() {
-        self.layer.cornerRadius = self.bounds.size.width * 0.02
+        self.layer.cornerRadius = self.bounds.size.width * cornerRadius
         self.layer.borderWidth = 1
     }
     

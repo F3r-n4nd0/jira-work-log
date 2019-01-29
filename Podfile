@@ -12,4 +12,6 @@ target 'jira-work-log' do
   pod 'NVActivityIndicatorView'
   pod 'SCLAlertView'
   pod 'SideMenu'
+  pod 'Kingfisher'
+  
 end

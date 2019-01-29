@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import SideMenu
 
+
 class BoardViewController: ViewController {
 
     internal var presenter: BoardPresenter!
@@ -33,13 +34,16 @@ class BoardViewController: ViewController {
     func subscribeTable() {
         presenter.issues.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: R.nib.issueTableViewCell.name, cellType: IssueTableViewCell.self)) { (row, element, cell) in
-                cell.textLabel?.text = element.fields.summary
+                cell.labelSummary.text = "\(element.fields.summary) (\(element.fields.timetracking.originalEstimate))"
+                cell.labelhours.text = element.fields.timetracking.timeSpent ?? "0h"
+                cell.imageViewIcon.image = element.fields.issuetype.name.getIconImage()
+                cell.viewBackground.backgroundColor = element.fields.timetracking.getColor()
             }
             .disposed(by: disposeBag)
-//        tableView.rx.itemSelected
-//            .subscribe(onNext: { [weak self] indexPath in
-//                self?.presenter.selectIndexPath(index: indexPath)
-//            }).disposed(by: disposeBag)
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                self?.presenter.selectIndexPath(index: indexPath)
+            }).disposed(by: disposeBag)
     }
     
     func subscribeLoading() {

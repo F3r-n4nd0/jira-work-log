@@ -17,10 +17,21 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 3 colors.
   struct color {
+    /// Color `IssueColor`.
+    static let issueColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "IssueColor")
     /// Color `MainColor`.
     static let mainColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "MainColor")
+    /// Color `bugColor`.
+    static let bugColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "bugColor")
+    
+    /// `UIColor(named: "IssueColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func issueColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.issueColor, compatibleWith: traitCollection)
+    }
     
     /// `UIColor(named: "MainColor", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
@@ -29,19 +40,40 @@ struct R: Rswift.Validatable {
       return UIKit.UIColor(resource: R.color.mainColor, compatibleWith: traitCollection)
     }
     
+    /// `UIColor(named: "bugColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func bugColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.bugColor, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
+    /// Image `icon-bug`.
+    static let iconBug = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-bug")
+    /// Image `icon-issue`.
+    static let iconIssue = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-issue")
     /// Image `logo`.
     static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon-bug", bundle: ..., traitCollection: ...)`
+    static func iconBug(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconBug, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon-issue", bundle: ..., traitCollection: ...)`
+    static func iconIssue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconIssue, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`

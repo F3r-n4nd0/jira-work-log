@@ -10,10 +10,12 @@ import Foundation
 
 struct JIRAIssueFields: Codable {
     
+    let issuetype: JIRAIssuetype
     let timetracking: JIRATimetracking
     let summary: String
     
     enum CodingKeys: String, CodingKey {
+        case issuetype
         case timetracking
         case summary
     }
