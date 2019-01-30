@@ -19,10 +19,12 @@ class SettingsRouter : Router {
     
     static func assembleModule(settings: Settings) -> SettingsRouter {
         let view = R.storyboard.settingsStoryboard.settingsViewController()!
-        let presenter = SettingsPresenter(domain: "fernand0.atlassian.net",settings: settings)
+        let presenter = SettingsPresenter(settings: settings)
         let router = SettingsRouter()
+        let interactor = SettingsInteractor()
         view.presenter = presenter
         presenter.router = router
+        presenter.interactor = interactor
         router.view = view
         return router
     }
@@ -30,7 +32,7 @@ class SettingsRouter : Router {
     func selectProject(callBack: @escaping (Result<JIRAProject>) -> Void) {
         let listProjectsRouter = ListProjectsRouter.assembleModule()
         executeInMainThread {
-            view?.navigationController?.pushViewController(listProjectsRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(listProjectsRouter.view!, animated: true)
         }
         listProjectsRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
@@ -50,7 +52,7 @@ class SettingsRouter : Router {
     func selectVersion(project: JIRAProject ,callBack: @escaping (Result<JIRAVersion>) -> Void) {
         let listVersionsRouter = ListVersionsRouter.assembleModule(project: project)
         executeInMainThread {
-            view?.navigationController?.pushViewController(listVersionsRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(listVersionsRouter.view!, animated: true)
         }
         listVersionsRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
@@ -70,7 +72,7 @@ class SettingsRouter : Router {
     func selectSprint(project: JIRAProject ,callBack: @escaping (Result<JIRASprint>) -> Void) {
         let listSprintRouter = ListSprintsRouter.assembleModule(project: project)
         executeInMainThread {
-            view?.navigationController?.pushViewController(listSprintRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(listSprintRouter.view!, animated: true)
         }
         listSprintRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {

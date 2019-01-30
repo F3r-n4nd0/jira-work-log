@@ -10,15 +10,9 @@ import Foundation
 
 class ListSprintsInteractor {
     
-    func getAllSprints(domain: String, project: JIRAProject,  callBack: @escaping (Result<[JIRASprint]>) -> Void) {
-        let headers = [
-            "cache-control": "no-cache",
-        ]
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/agile/1.0/board?projectKeyOrId=\(project.id ?? "")&type=scrum")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+    func getAllSprints(project: JIRAProject,  callBack: @escaping (Result<[JIRASprint]>) -> Void) {
+        let path = "/rest/agile/1.0/board?projectKeyOrId=\(project.id ?? "")&type=scrum"
+        let request = HTTPConnection.shared.createGetRequest(path:path)!
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void  in
             if let error = error {

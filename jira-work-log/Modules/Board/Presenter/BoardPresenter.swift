@@ -18,18 +18,19 @@ class BoardPresenter {
     var publishShowNotification = PublishSubject<Result<String>>()
     
     let issues = Variable<[JIRAIssue]>([])
-    
-    private var domain: String
+
     private var settings: Settings
     
-    init(domain: String,settings: Settings) {
-        self.domain = domain
+    init(settings: Settings) {
         self.settings = settings
     }
     
     func getIssues() {
+        if !settings.isValid() {
+            return
+        }
         publishLoading.onNext(true)
-        interactor.getAllIssues(domain: domain, settings: settings) { [weak self] (result) in
+        interactor.getAllIssues(settings: settings) { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):
@@ -52,9 +53,20 @@ class BoardPresenter {
         }
     }
     
+    func logOut() {
+        interactor.removeSettingsAndCredentials()
+        router.close()
+    }
+    
     func selectIndexPath(index: IndexPath) {
         let issue = issues.value[index.row]
-        
+        router.showIssue(issue: issue) { [weak self] (result) in
+            switch result {
+            case .success(_): break
+            case .failure(let error):
+                self?.publishShowNotification.onNext(Result.failure(error: error))
+            }
+        }
     }
     
 }

@@ -19,15 +19,9 @@ class ListProjectsPresenter {
     
     let projects = Variable<[JIRAProject]>([])
     
-    private var domain: String
-    
-    init(domain: String) {
-        self.domain = domain
-    }
-    
     func getProjects() {
         publishLoading.onNext(true)
-        interactor.getAllProjects(domain: domain ) { [weak self] (result) in
+        interactor.getAllProjects() { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):

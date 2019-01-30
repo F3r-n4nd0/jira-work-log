@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		155A71ED18FAB4CDBE7FCEFA /* Pods_jira_work_log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD7674563C636ECA75A8467 /* Pods_jira_work_log.framework */; };
+		B295B890220173CA000859B3 /* HTTPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B88F220173CA000859B3 /* HTTPConnection.swift */; };
+		B295B8932201743F000859B3 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B8922201743F000859B3 /* Credentials.swift */; };
 		B298C62721FE4116008CC401 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62621FE4116008CC401 /* Result.swift */; };
 		B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62821FE412F008CC401 /* SimpleResult.swift */; };
 		B298C62B21FE4479008CC401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62A21FE4479008CC401 /* ViewController.swift */; };
@@ -58,6 +60,14 @@
 		B298C6AD21FF7A96008CC401 /* JIRAIssueTypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C6AC21FF7A96008CC401 /* JIRAIssueTypeName.swift */; };
 		B2A5066E21FFFDE800B0211A /* JIRAIssueTypeName+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5066D21FFFDE800B0211A /* JIRAIssueTypeName+Icon.swift */; };
 		B2A506702200026500B0211A /* JIRATimeTracking+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5066F2200026500B0211A /* JIRATimeTracking+Alert.swift */; };
+		B2A506742200072B00B0211A /* IssueStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A506732200072B00B0211A /* IssueStoryboard.storyboard */; };
+		B2A5067622000AE300B0211A /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5067522000AE300B0211A /* IssueViewController.swift */; };
+		B2A5067922001C5B00B0211A /* IssueRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5067822001C5B00B0211A /* IssueRouter.swift */; };
+		B2A5067C22001CD400B0211A /* IssuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5067B22001CD400B0211A /* IssuePresenter.swift */; };
+		B2A5067F22001CF200B0211A /* IssueInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5067E22001CF200B0211A /* IssueInteractor.swift */; };
+		B2A506822200236700B0211A /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A506812200236700B0211A /* SettingsInteractor.swift */; };
+		B2A5068822009F6F00B0211A /* JIRAResponseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5068722009F6F00B0211A /* JIRAResponseSession.swift */; };
+		B2A5068A22009F8600B0211A /* JIRASession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5068922009F8600B0211A /* JIRASession.swift */; };
 		B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */; };
 		B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */; };
 		B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2FAEBB521FD1D61001F0D39 /* LaunchScreen.storyboard */; };
@@ -75,6 +85,8 @@
 /* Begin PBXFileReference section */
 		1A729DA88897273A886BF8F7 /* Pods_jira_work_logTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jira_work_logTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DC965B7971DB8FDC2F70EE /* Pods-jira-work-log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-log.debug.xcconfig"; path = "Target Support Files/Pods-jira-work-log/Pods-jira-work-log.debug.xcconfig"; sourceTree = "<group>"; };
+		B295B88F220173CA000859B3 /* HTTPConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnection.swift; sourceTree = "<group>"; };
+		B295B8922201743F000859B3 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B298C62621FE4116008CC401 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B298C62821FE412F008CC401 /* SimpleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResult.swift; sourceTree = "<group>"; };
 		B298C62A21FE4479008CC401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +137,14 @@
 		B298C6AC21FF7A96008CC401 /* JIRAIssueTypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAIssueTypeName.swift; sourceTree = "<group>"; };
 		B2A5066D21FFFDE800B0211A /* JIRAIssueTypeName+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JIRAIssueTypeName+Icon.swift"; sourceTree = "<group>"; };
 		B2A5066F2200026500B0211A /* JIRATimeTracking+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JIRATimeTracking+Alert.swift"; sourceTree = "<group>"; };
+		B2A506732200072B00B0211A /* IssueStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IssueStoryboard.storyboard; sourceTree = "<group>"; };
+		B2A5067522000AE300B0211A /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
+		B2A5067822001C5B00B0211A /* IssueRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRouter.swift; sourceTree = "<group>"; };
+		B2A5067B22001CD400B0211A /* IssuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenter.swift; sourceTree = "<group>"; };
+		B2A5067E22001CF200B0211A /* IssueInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInteractor.swift; sourceTree = "<group>"; };
+		B2A506812200236700B0211A /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		B2A5068722009F6F00B0211A /* JIRAResponseSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAResponseSession.swift; sourceTree = "<group>"; };
+		B2A5068922009F8600B0211A /* JIRASession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRASession.swift; sourceTree = "<group>"; };
 		B2FAEBA921FD1D5F001F0D39 /* jira-work-log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jira-work-log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2FAEBAC21FD1D5F001F0D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2FAEBB321FD1D61001F0D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,11 +186,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B295B89122017437000859B3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B295B8922201743F000859B3 /* Credentials.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B298C61F21FDFA45008CC401 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				B298C62621FE4116008CC401 /* Result.swift */,
 				B298C62821FE412F008CC401 /* SimpleResult.swift */,
+				B295B88F220173CA000859B3 /* HTTPConnection.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -241,6 +270,7 @@
 		B298C64521FE8354008CC401 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B2A506802200235A00B0211A /* Interactor */,
 				B298C65121FE9072008CC401 /* Entity */,
 				B298C64C21FE87CC008CC401 /* Router */,
 				B298C64B21FE87C2008CC401 /* Presenter */,
@@ -459,8 +489,62 @@
 		B2A50671220006A400B0211A /* Issue */ = {
 			isa = PBXGroup;
 			children = (
+				B2A5067D22001CE500B0211A /* Interactor */,
+				B2A5067A22001CB500B0211A /* Presenter */,
+				B2A5067722001C4E00B0211A /* Router */,
+				B2A506722200071E00B0211A /* View */,
 			);
 			path = Issue;
+			sourceTree = "<group>";
+		};
+		B2A506722200071E00B0211A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5067522000AE300B0211A /* IssueViewController.swift */,
+				B2A506732200072B00B0211A /* IssueStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2A5067722001C4E00B0211A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5067822001C5B00B0211A /* IssueRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B2A5067A22001CB500B0211A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5067B22001CD400B0211A /* IssuePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B2A5067D22001CE500B0211A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5067E22001CF200B0211A /* IssueInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B2A506802200235A00B0211A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B2A506812200236700B0211A /* SettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B2A5068622009F5D00B0211A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5068722009F6F00B0211A /* JIRAResponseSession.swift */,
+				B2A5068922009F8600B0211A /* JIRASession.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		B2FAEBA021FD1D5F001F0D39 = {
@@ -529,6 +613,7 @@
 		B2FAEBDD21FD2D29001F0D39 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B2A5068622009F5D00B0211A /* Entity */,
 				B2FAEBE921FD40C3001F0D39 /* Interactor */,
 				B2FAEBE621FD4023001F0D39 /* Presenter */,
 				B2FAEBE121FD2E7E001F0D39 /* View */,
@@ -573,6 +658,7 @@
 		B2FAEBF221FD4419001F0D39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B295B89122017437000859B3 /* Entity */,
 				B298C63F21FE750E008CC401 /* Router */,
 				B298C61F21FDFA45008CC401 /* Interactor */,
 				B2FAEBF321FD4420001F0D39 /* View */,
@@ -627,7 +713,7 @@
 				B2FAEBA521FD1D5F001F0D39 /* Sources */,
 				B2FAEBA621FD1D5F001F0D39 /* Frameworks */,
 				B2FAEBA721FD1D5F001F0D39 /* Resources */,
-				8FC77D9A17B9C0605B39F966 /* [CP] Embed Pods Frameworks */,
+				C2E4CD06959F4DF19F725223 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -677,6 +763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B298C66F21FEACD7008CC401 /* ListVertionsStoryboard.storyboard in Resources */,
+				B2A506742200072B00B0211A /* IssueStoryboard.storyboard in Resources */,
 				B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */,
 				B298C63521FE6B17008CC401 /* ProjectTableViewCell.xib in Resources */,
 				B298C68221FEB688008CC401 /* SprintTableViewCell.xib in Resources */,
@@ -717,44 +804,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8FC77D9A17B9C0605B39F966 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSVG/SwiftSVG.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSVG.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B2FAEBED21FD4207001F0D39 /* Run Script R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -775,6 +824,42 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/jira-work-log/Resources/R.generated.swift\"\n";
 		};
+		C2E4CD06959F4DF19F725223 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGCircularSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -782,35 +867,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A5067622000AE300B0211A /* IssueViewController.swift in Sources */,
 				B298C63C21FE6C1D008CC401 /* ListProjectsRouter.swift in Sources */,
 				B298C64421FE777C008CC401 /* JIRAProject.swift in Sources */,
 				B298C64A21FE86BE008CC401 /* SettingsViewController.swift in Sources */,
+				B2A5067C22001CD400B0211A /* IssuePresenter.swift in Sources */,
 				B298C65021FE88B0008CC401 /* SettingsRouter.swift in Sources */,
 				B298C66321FEA5CF008CC401 /* ListVersionsPresenter.swift in Sources */,
 				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
 				B298C67E21FEB688008CC401 /* JIRASprint.swift in Sources */,
+				B2A506822200236700B0211A /* SettingsInteractor.swift in Sources */,
 				B298C69721FEC52C008CC401 /* BoardPresenter.swift in Sources */,
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
 				B298C68321FEB688008CC401 /* ListSprintsViewController.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
 				B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */,
+				B2A5068822009F6F00B0211A /* JIRAResponseSession.swift in Sources */,
 				B298C68421FEB688008CC401 /* ListSprintsInteractor.swift in Sources */,
 				B2A506702200026500B0211A /* JIRATimeTracking+Alert.swift in Sources */,
 				B298C63421FE6B17008CC401 /* ProjectTableViewCell.swift in Sources */,
 				B298C68121FEB688008CC401 /* SprintTableViewCell.swift in Sources */,
 				B298C63A21FE6BCE008CC401 /* ListProjectsPresenter.swift in Sources */,
 				B298C66C21FEACB9008CC401 /* VersionTableViewCell.swift in Sources */,
+				B295B890220173CA000859B3 /* HTTPConnection.swift in Sources */,
+				B2A5068A22009F8600B0211A /* JIRASession.swift in Sources */,
 				B2FAEBF121FD4394001F0D39 /* R.generated.swift in Sources */,
+				B2A5067F22001CF200B0211A /* IssueInteractor.swift in Sources */,
 				B298C62B21FE4479008CC401 /* ViewController.swift in Sources */,
 				B298C67F21FEB688008CC401 /* ListSprintsPresenter.swift in Sources */,
 				B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */,
 				B298C6AB21FF5AA7008CC401 /* JIRAIssuetype.swift in Sources */,
 				B298C69121FEC3CD008CC401 /* IssueTableViewCell.swift in Sources */,
 				B298C65721FE9676008CC401 /* JIRAVersion.swift in Sources */,
+				B295B8932201743F000859B3 /* Credentials.swift in Sources */,
 				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
 				B298C64121FE7514008CC401 /* Router.swift in Sources */,
 				B298C69F21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift in Sources */,
 				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
+				B2A5067922001C5B00B0211A /* IssueRouter.swift in Sources */,
 				B298C6AD21FF7A96008CC401 /* JIRAIssueTypeName.swift in Sources */,
 				B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */,
 				B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */,

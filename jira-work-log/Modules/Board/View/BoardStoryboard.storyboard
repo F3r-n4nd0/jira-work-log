@@ -22,7 +22,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-r6-rC8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="VKs-gd-er5">
+                                    <navigationItem title="Board" id="VKs-gd-er5">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" id="czF-R8-c1g">
                                             <connections>
                                                 <segue destination="NQY-n1-BCJ" kind="presentation" id="c2s-Q0-EAD"/>
@@ -106,6 +106,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchUpInsideLogOut:" destination="8Oc-al-Mwr" eventType="touchUpInside" id="FWD-ZK-xJ5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

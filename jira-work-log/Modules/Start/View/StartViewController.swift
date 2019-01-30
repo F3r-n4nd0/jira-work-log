@@ -12,20 +12,26 @@ class StartViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         let loginRoute = LoginRouter.assembleModule()
         addChild(loginRoute.view!)
+        if getCredentials() {
+            let router = BoardRouter.assembleModule(settings: GetSettings() ?? Settings())
+            self.addChild(router.view!)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getCredentials() -> Bool {
+        if let data = UserDefaults.standard.value(forKey:Credentials.name) as? Data {
+            let credential = try? PropertyListDecoder().decode(Credentials.self, from: data)
+            HTTPConnection.shared.credentials = credential
+        }
+        return (HTTPConnection.shared.credentials != nil)
     }
-    */
-
+    
+    func GetSettings() -> Settings? {
+        if let data = UserDefaults.standard.value(forKey:Settings.name) as? Data {
+            return try? PropertyListDecoder().decode(Settings.self, from: data)
+        }
+        return nil
+    }
 }

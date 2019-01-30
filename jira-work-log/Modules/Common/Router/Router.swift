@@ -10,11 +10,11 @@ import Foundation
 
 class Router {
     
-    func executeInMainThread(method: () -> Void) {
+    func executeInMainThread(method: @escaping () -> Void) {
         if Thread.isMainThread {
             method()
         } else {
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 method()
             }
         }

@@ -17,7 +17,7 @@ class LoginRouter: Router  {
     
     static func assembleModule() -> LoginRouter {
         let view = R.storyboard.loginStoryboard.loginViewController()!
-        let presenter = LoginPresenter(domain: "fernand0.atlassian.net")
+        let presenter = LoginPresenter()
         let interactor = LoginInteractor()
         let router = LoginRouter()
         view.presenter = presenter
@@ -27,10 +27,10 @@ class LoginRouter: Router  {
         return router
     }
     
-    func showBoard() {
-        let boardRouter = BoardRouter.assembleModule(settings: Settings())
+    func showBoard(settings: Settings) {
+        let boardRouter = BoardRouter.assembleModule(settings: settings)
         executeInMainThread {
-            view?.navigationController?.pushViewController(boardRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(boardRouter.view!, animated: true)
         }
         boardRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {

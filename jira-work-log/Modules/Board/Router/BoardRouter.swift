@@ -19,7 +19,7 @@ class BoardRouter: Router {
     
     static func assembleModule(settings: Settings) -> BoardRouter {
         let view = R.storyboard.boardStoryboard.boardViewController()!
-        let presenter = BoardPresenter(domain: "fernand0.atlassian.net", settings: settings)
+        let presenter = BoardPresenter(settings: settings)
         let interactor = BoardInteractor()
         let router = BoardRouter()
         view.presenter = presenter
@@ -36,7 +36,7 @@ class BoardRouter: Router {
     func showSettigs(settings: Settings, callBack: @escaping (Result<Settings>) -> Void) {
         let settingsRouter = SettingsRouter.assembleModule(settings: settings)
         executeInMainThread {
-            view?.navigationController?.pushViewController(settingsRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(settingsRouter.view!, animated: true)
         }
         settingsRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
@@ -47,10 +47,36 @@ class BoardRouter: Router {
                 callBack(Result.failure(error: error))
                 break
             case .completed:
-                self?.view?.navigationController?.popViewController(animated: true)
+                self?.executeInMainThread {
+                    self?.view?.navigationController?.popViewController(animated: true)
+                }
                 break
             }
             }.disposed(by: disposeBag)
     }
+    
+    func showIssue(issue: JIRAIssue, callBack: @escaping (Result<Void>) -> Void) {
+        let issueRouter = IssueRouter.assembleModule(issue: issue)
+        executeInMainThread {
+            self.view?.navigationController?.pushViewController(issueRouter.view!, animated: true)
+        }
+        issueRouter.publishRouter.subscribe { [weak self] (event) in
+            switch event {
+            case .next(let setting):
+                callBack(Result.success(result: setting))
+                break
+            case .error(let error):
+                callBack(Result.failure(error: error))
+                break
+            case .completed:
+                self?.executeInMainThread {
+                    self?.view?.navigationController?.popViewController(animated: true)
+                }
+                break
+            }
+            }.disposed(by: disposeBag)
+    }
+    
+    
     
 }

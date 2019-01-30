@@ -33,11 +33,13 @@ class BoardViewController: ViewController {
     
     func subscribeTable() {
         presenter.issues.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: R.nib.issueTableViewCell.name, cellType: IssueTableViewCell.self)) { (row, element, cell) in
+            .bind(to: tableView.rx.items(cellIdentifier: R.nib.issueTableViewCell.name, cellType: IssueTableViewCell.self)) {(row, element, cell) in
                 cell.labelSummary.text = "\(element.fields.summary) (\(element.fields.timetracking.originalEstimate))"
                 cell.labelhours.text = element.fields.timetracking.timeSpent ?? "0h"
                 cell.imageViewIcon.image = element.fields.issuetype.name.getIconImage()
-                cell.viewBackground.backgroundColor = element.fields.timetracking.getColor()
+                DispatchQueue.main.async {
+                    cell.viewBackground.backgroundColor = element.fields.timetracking.getColor()
+                }
             }
             .disposed(by: disposeBag)
         tableView.rx.itemSelected
@@ -47,7 +49,8 @@ class BoardViewController: ViewController {
     }
     
     func subscribeLoading() {
-        presenter.publishLoading.subscribe(onNext: { [weak self] (result) in
+        presenter.publishLoading.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (result) in
             if result {
                 self?.startWaitAnimation()
             } else {
@@ -67,10 +70,15 @@ class BoardViewController: ViewController {
         }).disposed(by: disposeBag)
     }
     
-    
     func selectSettings() {
         dismiss(animated: true) { [weak self] in
             self?.presenter.showSettings()
+        }
+    }
+    
+    func selectLogOut() {
+        dismiss(animated: true) { [weak self] in
+            self?.presenter.logOut()
         }
     }
     

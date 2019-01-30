@@ -15,6 +15,7 @@ class LoginViewController: ViewController {
     
     @IBOutlet weak var textFieldUseName: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldDomain: UITextField!
     
     private let disposeBag = DisposeBag()
     
@@ -27,7 +28,7 @@ class LoginViewController: ViewController {
         subscribeLoading()
         subscribeNotification()
     }
-    
+
     func subscribeLoading() {
         presenter.publishLoading.subscribe(onNext: { [weak self] (result) in
             if result {
@@ -52,7 +53,8 @@ class LoginViewController: ViewController {
     @IBAction func touchUpInside(_ sender: UIButton) {
         let userName = textFieldUseName.text ?? ""
         let password = textFieldPassword.text ?? ""
-        presenter.initLoad(user: userName, password: password)
+        let domain = textFieldDomain.text ?? ""
+        presenter.login(user: userName, password: password, domain: domain)
     }
 
 }

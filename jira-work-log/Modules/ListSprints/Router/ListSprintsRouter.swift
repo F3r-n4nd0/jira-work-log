@@ -17,7 +17,7 @@ class ListSprintsRouter : Router {
     
     static func assembleModule(project: JIRAProject) -> ListSprintsRouter {
         let view = R.storyboard.listSprintsStoryboard.listSprintsViewController()!
-        let presenter = ListSprintsPresenter(domain: "fernand0.atlassian.net", project: project)
+        let presenter = ListSprintsPresenter(project: project)
         let interactor = ListSprintsInteractor()
         let router = ListSprintsRouter()
         view.presenter = presenter

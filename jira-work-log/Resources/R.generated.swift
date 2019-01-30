@@ -50,20 +50,50 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
+    /// Image `Bedtime`.
+    static let bedtime = Rswift.ImageResource(bundle: R.hostingBundle, name: "Bedtime")
+    /// Image `Hours`.
+    static let hours = Rswift.ImageResource(bundle: R.hostingBundle, name: "Hours")
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
+    /// Image `Wake`.
+    static let wake = Rswift.ImageResource(bundle: R.hostingBundle, name: "Wake")
+    /// Image `finish`.
+    static let finish = Rswift.ImageResource(bundle: R.hostingBundle, name: "finish")
     /// Image `icon-bug`.
     static let iconBug = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-bug")
     /// Image `icon-issue`.
     static let iconIssue = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-issue")
     /// Image `logo`.
     static let logo = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo")
+    /// Image `start`.
+    static let start = Rswift.ImageResource(bundle: R.hostingBundle, name: "start")
+    
+    /// `UIImage(named: "Bedtime", bundle: ..., traitCollection: ...)`
+    static func bedtime(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.bedtime, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Hours", bundle: ..., traitCollection: ...)`
+    static func hours(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.hours, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Wake", bundle: ..., traitCollection: ...)`
+    static func wake(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.wake, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "finish", bundle: ..., traitCollection: ...)`
+    static func finish(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.finish, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon-bug", bundle: ..., traitCollection: ...)`
@@ -79,6 +109,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "logo", bundle: ..., traitCollection: ...)`
     static func logo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.logo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "start", bundle: ..., traitCollection: ...)`
+    static func start(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.start, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -152,10 +187,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 8 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 9 storyboards.
   struct storyboard {
     /// Storyboard `BoardStoryboard`.
     static let boardStoryboard = _R.storyboard.boardStoryboard()
+    /// Storyboard `IssueStoryboard`.
+    static let issueStoryboard = _R.storyboard.issueStoryboard()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `ListProjectsStoryboard`.
@@ -174,6 +211,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "BoardStoryboard", bundle: ...)`
     static func boardStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.boardStoryboard)
+    }
+    
+    /// `UIStoryboard(name: "IssueStoryboard", bundle: ...)`
+    static func issueStoryboard(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.issueStoryboard)
     }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -295,6 +337,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try boardStoryboard.validate()
+      try issueStoryboard.validate()
       try launchScreen.validate()
       try listProjectsStoryboard.validate()
       try listSprintsStoryboard.validate()
@@ -324,6 +367,26 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.boardStoryboard().boardViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'boardViewController' could not be loaded from storyboard 'BoardStoryboard' as 'BoardViewController'.") }
         if _R.storyboard.boardStoryboard().uiSideMenuNavigationController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'uiSideMenuNavigationController' could not be loaded from storyboard 'BoardStoryboard' as 'SideMenu.UISideMenuNavigationController'.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct issueStoryboard: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let issueViewController = StoryboardViewControllerResource<IssueViewController>(identifier: "IssueViewController")
+      let name = "IssueStoryboard"
+      
+      func issueViewController(_: Void = ()) -> IssueViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: issueViewController)
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Hours", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Hours' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
+        if #available(iOS 11.0, *) {
+          if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
+        }
+        if _R.storyboard.issueStoryboard().issueViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'issueViewController' could not be loaded from storyboard 'IssueStoryboard' as 'IssueViewController'.") }
       }
       
       fileprivate init() {}

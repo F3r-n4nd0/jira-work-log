@@ -19,17 +19,15 @@ class ListSprintsPresenter {
     
     let sprints = Variable<[JIRASprint]>([])
     
-    private var domain: String
     private var project: JIRAProject
     
-    init(domain: String,project: JIRAProject) {
-        self.domain = domain
+    init(project: JIRAProject) {
         self.project = project
     }
     
     func getSprints() {
         publishLoading.onNext(true)
-        interactor.getAllSprints(domain: domain, project: project ) { [weak self] (result) in
+        interactor.getAllSprints(project: project ) { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):

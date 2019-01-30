@@ -21,5 +21,9 @@ class MenuViewController: UIViewController {
     @IBAction func touchUpInsideSettings(_ sender: UIButton) {
         boardViewController?.selectSettings()
     }
+    
+    @IBAction func touchUpInsideLogOut(_ sender: UIButton) {
+        boardViewController?.selectLogOut()
+    }
 
 }

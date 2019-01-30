@@ -17,13 +17,17 @@ class LoginPresenter {
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
     
-    let domain: String
-    
-    init(domain: String) {
-        self.domain = domain
+    func showBoard(user: String, password: String) {
+        interactor.storeCredentials()
+       self.loadSettingsAndShowBoard()
     }
     
-    func initLoad(user: String, password: String) {
+    func loadSettingsAndShowBoard() {
+        let settings = interactor.GetSettings()
+        router.showBoard(settings: settings ?? Settings())
+    }
+    
+    func login(user: String, password: String, domain: String) {
         do {
             publishLoading.onNext(true)
             try interactor.loginJira(domain: domain, user: user, password: password) { [weak self] (result) in
@@ -31,7 +35,7 @@ class LoginPresenter {
                 switch result {
                 case .success(let result):
                     if result {
-                        self?.router.showBoard()
+                        self?.showBoard(user: user, password: password)
                     } else {
                         self?.publishShowNotification.onNext(Result.success(result: "Incorrect user or password"))
                     }

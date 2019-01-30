@@ -17,7 +17,7 @@ class ListProjectsRouter : Router {
     
     static func assembleModule() -> ListProjectsRouter {
         let view = R.storyboard.listProjectsStoryboard.listProjectsViewController()!
-        let presenter = ListProjectsPresenter(domain: "fernand0.atlassian.net")
+        let presenter = ListProjectsPresenter()
         let interactor = ListProjectsInteractor()
         let router = ListProjectsRouter()
         view.presenter = presenter

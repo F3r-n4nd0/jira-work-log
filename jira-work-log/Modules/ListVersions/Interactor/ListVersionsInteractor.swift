@@ -10,15 +10,9 @@ import Foundation
 
 class ListVersionsInteractor {
     
-    func getAllVersions(domain: String, project: JIRAProject,  callBack: @escaping (Result<[JIRAVersion]>) -> Void) {
-        let headers = [
-            "cache-control": "no-cache",
-        ]
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/api/2/project/\(project.key ?? "")/versions")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+    func getAllVersions(project: JIRAProject,  callBack: @escaping (Result<[JIRAVersion]>) -> Void) {
+        let path = "/rest/api/2/project/\(project.key ?? "")/versions"
+        let request = HTTPConnection.shared.createGetRequest(path:path)!
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void  in
             if let error = error {
@@ -39,7 +33,6 @@ class ListVersionsInteractor {
                 return
             }
         })
-        
         dataTask.resume()
     }
 }

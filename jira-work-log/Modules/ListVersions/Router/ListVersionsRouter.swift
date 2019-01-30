@@ -17,7 +17,7 @@ class ListVersionsRouter : Router {
     
     static func assembleModule(project: JIRAProject) -> ListVersionsRouter {
         let view = R.storyboard.listVertionsStoryboard.listVertionsViewController()!
-        let presenter = ListVersionsPresenter(domain: "fernand0.atlassian.net", project: project)
+        let presenter = ListVersionsPresenter(project: project)
         let interactor = ListVersionsInteractor()
         let router = ListVersionsRouter()
         view.presenter = presenter

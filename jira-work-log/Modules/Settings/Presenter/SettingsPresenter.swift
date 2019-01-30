@@ -12,15 +12,13 @@ import RxSwift
 class SettingsPresenter {
     
     var router: SettingsRouter!
+    var interactor: SettingsInteractor!
     
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
     let settings: Variable<Settings>
-    
-    private let domain: String
         
-    init(domain: String,settings: Settings) {
-        self.domain = domain
+    init(settings: Settings) {
         self.settings = Variable<Settings>(settings)
     }
     
@@ -68,6 +66,7 @@ class SettingsPresenter {
     }
     
     func selectDone() {
+        interactor.saveSettings(setting: settings.value)
         router.selectDone(settings: settings.value)
     }
     

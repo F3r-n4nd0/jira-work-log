@@ -10,17 +10,11 @@ import Foundation
 
 class BoardInteractor {
     
-    func getAllIssues(domain: String, settings: Settings,  callBack: @escaping (Result<[JIRAIssue]>) -> Void) {
-        let headers = [
-            "cache-control": "no-cache",
-            ]
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/agile/1.0/board/\(settings.sprint?.id ?? 0)/issue?boardId=\(settings.sprint?.id ?? 0)")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+    func getAllIssues(settings: Settings,  callBack: @escaping (Result<[JIRAIssue]>) -> Void) {
+        let path = "/rest/agile/1.0/board/\(settings.sprint?.id ?? 0)/issue?boardId=\(settings.sprint?.id ?? 0)"
+        let request = HTTPConnection.shared.createGetRequest(path: path)!
         let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void  in
+        let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void  in
             if let error = error {
                 callBack(Result.failure(error: error))
                 return
@@ -39,8 +33,14 @@ class BoardInteractor {
                 return
             }
         })
-        
         dataTask.resume()
+    }
+    
+    func removeSettingsAndCredentials() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: Settings.name)
+        userDefaults.removeObject(forKey: Credentials.name)
+        userDefaults.synchronize()
     }
     
 }

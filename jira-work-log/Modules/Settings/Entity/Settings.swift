@@ -10,8 +10,15 @@ import Foundation
 
 
 public struct Settings: Codable {
+    
+    static let name = "settings"
+    
     public var project: JIRAProject?
     public var version: JIRAVersion?
     public var sprint: JIRASprint?
+    
+    func isValid() -> Bool {
+        return (project != nil) && (version != nil) && (sprint != nil)
+    }
 }
 

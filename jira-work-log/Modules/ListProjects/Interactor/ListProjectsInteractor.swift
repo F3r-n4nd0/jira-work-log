@@ -9,16 +9,9 @@
 import Foundation
 
 class ListProjectsInteractor {
-    
-    func getAllProjects(domain: String, callBack: @escaping (Result<[JIRAProject]>) -> Void) {
-        let headers = [
-            "cache-control": "no-cache",
-        ]
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/api/2/project")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+
+    func getAllProjects(callBack: @escaping (Result<[JIRAProject]>) -> Void) {
+        let request = HTTPConnection.shared.createGetRequest(path: "/rest/api/2/project/")!
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void  in
             if let error = error {
@@ -39,7 +32,7 @@ class ListProjectsInteractor {
                 return
             }
         })
-        
         dataTask.resume()
     }
+    
 }

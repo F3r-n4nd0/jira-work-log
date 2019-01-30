@@ -19,17 +19,15 @@ class ListVersionsPresenter {
     
     let versions = Variable<[JIRAVersion]>([])
     
-    private var domain: String
     private var project: JIRAProject
     
-    init(domain: String,project: JIRAProject) {
-        self.domain = domain
+    init(project: JIRAProject) {
         self.project = project
     }
     
     func getVersions() {
         publishLoading.onNext(true)
-        interactor.getAllVersions(domain: domain, project: project ) { [weak self] (result) in
+        interactor.getAllVersions(project: project) { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):

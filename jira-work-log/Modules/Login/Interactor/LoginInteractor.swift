@@ -9,27 +9,11 @@
 import Foundation
 
 class LoginInteractor {
-   
     
     func loginJira(domain: String, user: String, password: String, callBack: @escaping (Result<Bool>) -> Void) throws {
-        let headers = [
-            "Content-Type": "application/json",
-            "cache-control": "no-cache",
-        ]
-        let parameters = [
-            "username": user,
-            "password": password
-            ] as [String : Any]
-        
-        let postData = try JSONSerialization.data(withJSONObject: parameters, options: [])
-        let request = NSMutableURLRequest(url: NSURL(string: "https://\(domain)/rest/auth/1/session")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = postData as Data
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+        HTTPConnection.shared.credentials = Credentials(user: user, password: password, domain: domain)
+        let request = HTTPConnection.shared.createGetRequest(path: "/rest/auth/1/session/")!
+        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 callBack(Result.failure(error: error))
                 return
@@ -39,8 +23,21 @@ class LoginInteractor {
                 return
             }
             callBack(Result.success(result: false))
-        })
+        }
         dataTask.resume()
+    }
+    
+    func GetSettings() -> Settings? {
+        if let data = UserDefaults.standard.value(forKey:Settings.name) as? Data {
+            return try? PropertyListDecoder().decode(Settings.self, from: data)
+        }
+        return nil
+    }
+    
+    func storeCredentials() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(try? PropertyListEncoder().encode(HTTPConnection.shared.credentials), forKey:Credentials.name)
+        userDefaults.synchronize()
     }
     
 }

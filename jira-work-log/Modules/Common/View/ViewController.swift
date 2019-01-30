@@ -14,11 +14,15 @@ import NVActivityIndicatorView
 class ViewController:  UIViewController, NVActivityIndicatorViewable {
     
     func startWaitAnimation() {
-        self.startAnimating()
+        executeInMainThread {
+            self.startAnimating()
+        }
     }
     
     func stopWaitAnimation() {
-        self.stopAnimating()
+        executeInMainThread {
+            self.stopAnimating()
+        }
     }
     
     func showErrorMessage(message: String) {
@@ -33,7 +37,7 @@ class ViewController:  UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    func executeInMainThread(method: () -> Void) {
+    func executeInMainThread(method: @escaping () -> Void) {
         if Thread.isMainThread {
             method()
         } else {
