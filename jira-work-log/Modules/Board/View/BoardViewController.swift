@@ -82,6 +82,12 @@ class BoardViewController: ViewController {
         }
     }
     
+    func selectBurndownChart() {
+        dismiss(animated: true) { [weak self] in
+            self?.presenter.showBurnDownChart()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.destination is UISideMenuNavigationController

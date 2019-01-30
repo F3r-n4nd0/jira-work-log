@@ -69,7 +69,7 @@ class SettingsRouter : Router {
             }.disposed(by: disposeBag)
     }
     
-    func selectSprint(project: JIRAProject ,callBack: @escaping (Result<JIRASprint>) -> Void) {
+    func selectSprint(project: JIRAProject ,callBack: @escaping (Result<JIRABoard>) -> Void) {
         let listSprintRouter = ListSprintsRouter.assembleModule(project: project)
         executeInMainThread {
             self.view?.navigationController?.pushViewController(listSprintRouter.view!, animated: true)

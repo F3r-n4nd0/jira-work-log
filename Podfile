@@ -13,5 +13,6 @@ target 'jira-work-log' do
   pod 'SCLAlertView'
   pod 'SideMenu'
   pod 'HGCircularSlider'
+  pod 'Charts'
   
 end

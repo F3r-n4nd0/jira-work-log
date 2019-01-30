@@ -29,7 +29,7 @@ class SettingsPresenter {
                 if self?.settings.value.project?.id != project.id {
                     self?.settings.value.project = project
                     self?.settings.value.version = nil
-                    self?.settings.value.sprint = nil
+                    self?.settings.value.board = nil
                 }
             case .failure(let error):
                 self?.publishShowNotification.onNext(Result.failure(error: error))
@@ -58,7 +58,7 @@ class SettingsPresenter {
         router.selectSprint(project: project) { [weak self] (result) in
             switch result {
             case .success(let sprint):
-                self?.settings.value.sprint = sprint
+                self?.settings.value.board = sprint
             case .failure(let error):
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }

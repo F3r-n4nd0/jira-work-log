@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		155A71ED18FAB4CDBE7FCEFA /* Pods_jira_work_log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD7674563C636ECA75A8467 /* Pods_jira_work_log.framework */; };
+		B21451F222024A56003FB487 /* JIRABurnDownChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451F122024A56003FB487 /* JIRABurnDownChart.swift */; };
+		B21451F522024BE2003FB487 /* BurnDownChartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451F422024BE2003FB487 /* BurnDownChartInteractor.swift */; };
+		B21451F822024C6F003FB487 /* BurnDownChartStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21451F722024C6F003FB487 /* BurnDownChartStoryboard.storyboard */; };
+		B21451FB220253AA003FB487 /* BurnDownChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451FA220253AA003FB487 /* BurnDownChartPresenter.swift */; };
+		B21451FE220258B8003FB487 /* BurnDownChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451FD220258B8003FB487 /* BurnDownChartViewController.swift */; };
+		B2145201220259F3003FB487 /* BurnDownChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2145200220259F3003FB487 /* BurnDownChartRouter.swift */; };
 		B295B890220173CA000859B3 /* HTTPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B88F220173CA000859B3 /* HTTPConnection.swift */; };
 		B295B8932201743F000859B3 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B8922201743F000859B3 /* Credentials.swift */; };
 		B298C62721FE4116008CC401 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62621FE4116008CC401 /* Result.swift */; };
@@ -35,13 +41,13 @@
 		B298C66C21FEACB9008CC401 /* VersionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C66A21FEACB9008CC401 /* VersionTableViewCell.swift */; };
 		B298C66D21FEACB9008CC401 /* VersionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C66B21FEACB9008CC401 /* VersionTableViewCell.xib */; };
 		B298C66F21FEACD7008CC401 /* ListVertionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C66E21FEACD7008CC401 /* ListVertionsStoryboard.storyboard */; };
-		B298C67E21FEB688008CC401 /* JIRASprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67221FEB688008CC401 /* JIRASprint.swift */; };
-		B298C67F21FEB688008CC401 /* ListSprintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67421FEB688008CC401 /* ListSprintsPresenter.swift */; };
-		B298C68021FEB688008CC401 /* ListSprintsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C67621FEB688008CC401 /* ListSprintsStoryboard.storyboard */; };
-		B298C68121FEB688008CC401 /* SprintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67721FEB688008CC401 /* SprintTableViewCell.swift */; };
-		B298C68221FEB688008CC401 /* SprintTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C67821FEB688008CC401 /* SprintTableViewCell.xib */; };
-		B298C68321FEB688008CC401 /* ListSprintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67921FEB688008CC401 /* ListSprintsViewController.swift */; };
-		B298C68421FEB688008CC401 /* ListSprintsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67B21FEB688008CC401 /* ListSprintsInteractor.swift */; };
+		B298C67E21FEB688008CC401 /* JIRABoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67221FEB688008CC401 /* JIRABoard.swift */; };
+		B298C67F21FEB688008CC401 /* ListBoardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67421FEB688008CC401 /* ListBoardsPresenter.swift */; };
+		B298C68021FEB688008CC401 /* ListBoardsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C67621FEB688008CC401 /* ListBoardsStoryboard.storyboard */; };
+		B298C68121FEB688008CC401 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67721FEB688008CC401 /* BoardTableViewCell.swift */; };
+		B298C68221FEB688008CC401 /* BoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C67821FEB688008CC401 /* BoardTableViewCell.xib */; };
+		B298C68321FEB688008CC401 /* ListBoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67921FEB688008CC401 /* ListBoardsViewController.swift */; };
+		B298C68421FEB688008CC401 /* ListBoardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67B21FEB688008CC401 /* ListBoardsInteractor.swift */; };
 		B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */; };
 		B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */; };
 		B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */; };
@@ -85,6 +91,12 @@
 /* Begin PBXFileReference section */
 		1A729DA88897273A886BF8F7 /* Pods_jira_work_logTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jira_work_logTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DC965B7971DB8FDC2F70EE /* Pods-jira-work-log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jira-work-log.debug.xcconfig"; path = "Target Support Files/Pods-jira-work-log/Pods-jira-work-log.debug.xcconfig"; sourceTree = "<group>"; };
+		B21451F122024A56003FB487 /* JIRABurnDownChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRABurnDownChart.swift; sourceTree = "<group>"; };
+		B21451F422024BE2003FB487 /* BurnDownChartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartInteractor.swift; sourceTree = "<group>"; };
+		B21451F722024C6F003FB487 /* BurnDownChartStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BurnDownChartStoryboard.storyboard; sourceTree = "<group>"; };
+		B21451FA220253AA003FB487 /* BurnDownChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartPresenter.swift; sourceTree = "<group>"; };
+		B21451FD220258B8003FB487 /* BurnDownChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartViewController.swift; sourceTree = "<group>"; };
+		B2145200220259F3003FB487 /* BurnDownChartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartRouter.swift; sourceTree = "<group>"; };
 		B295B88F220173CA000859B3 /* HTTPConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnection.swift; sourceTree = "<group>"; };
 		B295B8922201743F000859B3 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B298C62621FE4116008CC401 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -112,13 +124,13 @@
 		B298C66A21FEACB9008CC401 /* VersionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionTableViewCell.swift; sourceTree = "<group>"; };
 		B298C66B21FEACB9008CC401 /* VersionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VersionTableViewCell.xib; sourceTree = "<group>"; };
 		B298C66E21FEACD7008CC401 /* ListVertionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListVertionsStoryboard.storyboard; sourceTree = "<group>"; };
-		B298C67221FEB688008CC401 /* JIRASprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JIRASprint.swift; sourceTree = "<group>"; };
-		B298C67421FEB688008CC401 /* ListSprintsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsPresenter.swift; sourceTree = "<group>"; };
-		B298C67621FEB688008CC401 /* ListSprintsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListSprintsStoryboard.storyboard; sourceTree = "<group>"; };
-		B298C67721FEB688008CC401 /* SprintTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprintTableViewCell.swift; sourceTree = "<group>"; };
-		B298C67821FEB688008CC401 /* SprintTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SprintTableViewCell.xib; sourceTree = "<group>"; };
-		B298C67921FEB688008CC401 /* ListSprintsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsViewController.swift; sourceTree = "<group>"; };
-		B298C67B21FEB688008CC401 /* ListSprintsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsInteractor.swift; sourceTree = "<group>"; };
+		B298C67221FEB688008CC401 /* JIRABoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JIRABoard.swift; sourceTree = "<group>"; };
+		B298C67421FEB688008CC401 /* ListBoardsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsPresenter.swift; sourceTree = "<group>"; };
+		B298C67621FEB688008CC401 /* ListBoardsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListBoardsStoryboard.storyboard; sourceTree = "<group>"; };
+		B298C67721FEB688008CC401 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
+		B298C67821FEB688008CC401 /* BoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardTableViewCell.xib; sourceTree = "<group>"; };
+		B298C67921FEB688008CC401 /* ListBoardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsViewController.swift; sourceTree = "<group>"; };
+		B298C67B21FEB688008CC401 /* ListBoardsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsInteractor.swift; sourceTree = "<group>"; };
 		B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsRouter.swift; sourceTree = "<group>"; };
 		B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAResponseBoard.swift; sourceTree = "<group>"; };
 		B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoardStoryboard.storyboard; sourceTree = "<group>"; };
@@ -184,6 +196,59 @@
 				CB12CA26F6FCBEAFEE829C68 /* Pods_jira_work_logUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B21451EF220240EB003FB487 /* BurdDownChart */ = {
+			isa = PBXGroup;
+			children = (
+				B21451FF220259DD003FB487 /* Router */,
+				B21451F922025395003FB487 /* Presenter */,
+				B21451F622024C5C003FB487 /* View */,
+				B21451F322024BD5003FB487 /* Interactor */,
+				B21451F022024A02003FB487 /* Entity */,
+			);
+			path = BurdDownChart;
+			sourceTree = "<group>";
+		};
+		B21451F022024A02003FB487 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B21451F122024A56003FB487 /* JIRABurnDownChart.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B21451F322024BD5003FB487 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B21451F422024BE2003FB487 /* BurnDownChartInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B21451F622024C5C003FB487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21451FD220258B8003FB487 /* BurnDownChartViewController.swift */,
+				B21451F722024C6F003FB487 /* BurnDownChartStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21451F922025395003FB487 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B21451FA220253AA003FB487 /* BurnDownChartPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B21451FF220259DD003FB487 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2145200220259F3003FB487 /* BurnDownChartRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		B295B89122017437000859B3 /* Entity */ = {
@@ -367,7 +432,7 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		B298C67021FEB688008CC401 /* ListSprints */ = {
+		B298C67021FEB688008CC401 /* ListBoards */ = {
 			isa = PBXGroup;
 			children = (
 				B298C67121FEB688008CC401 /* Entity */,
@@ -376,13 +441,13 @@
 				B298C67A21FEB688008CC401 /* Interactor */,
 				B298C67C21FEB688008CC401 /* Router */,
 			);
-			path = ListSprints;
+			path = ListBoards;
 			sourceTree = "<group>";
 		};
 		B298C67121FEB688008CC401 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				B298C67221FEB688008CC401 /* JIRASprint.swift */,
+				B298C67221FEB688008CC401 /* JIRABoard.swift */,
 				B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */,
 			);
 			path = Entity;
@@ -391,7 +456,7 @@
 		B298C67321FEB688008CC401 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				B298C67421FEB688008CC401 /* ListSprintsPresenter.swift */,
+				B298C67421FEB688008CC401 /* ListBoardsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -399,10 +464,10 @@
 		B298C67521FEB688008CC401 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B298C67921FEB688008CC401 /* ListSprintsViewController.swift */,
-				B298C67621FEB688008CC401 /* ListSprintsStoryboard.storyboard */,
-				B298C67721FEB688008CC401 /* SprintTableViewCell.swift */,
-				B298C67821FEB688008CC401 /* SprintTableViewCell.xib */,
+				B298C67921FEB688008CC401 /* ListBoardsViewController.swift */,
+				B298C67621FEB688008CC401 /* ListBoardsStoryboard.storyboard */,
+				B298C67721FEB688008CC401 /* BoardTableViewCell.swift */,
+				B298C67821FEB688008CC401 /* BoardTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,7 +475,7 @@
 		B298C67A21FEB688008CC401 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B298C67B21FEB688008CC401 /* ListSprintsInteractor.swift */,
+				B298C67B21FEB688008CC401 /* ListBoardsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -597,10 +662,11 @@
 		B2FAEBDC21FD25F3001F0D39 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B21451EF220240EB003FB487 /* BurdDownChart */,
 				B2A50671220006A400B0211A /* Issue */,
 				B2FAEBF221FD4419001F0D39 /* Common */,
 				B298C68821FEC212008CC401 /* Board */,
-				B298C67021FEB688008CC401 /* ListSprints */,
+				B298C67021FEB688008CC401 /* ListBoards */,
 				B298C65421FE963B008CC401 /* ListVersions */,
 				B2FAEBF621FD47E3001F0D39 /* Start */,
 				B298C62C21FE54FB008CC401 /* ListProjects */,
@@ -766,14 +832,15 @@
 				B2A506742200072B00B0211A /* IssueStoryboard.storyboard in Resources */,
 				B2FAEBB721FD1D61001F0D39 /* LaunchScreen.storyboard in Resources */,
 				B298C63521FE6B17008CC401 /* ProjectTableViewCell.xib in Resources */,
-				B298C68221FEB688008CC401 /* SprintTableViewCell.xib in Resources */,
+				B21451F822024C6F003FB487 /* BurnDownChartStoryboard.storyboard in Resources */,
+				B298C68221FEB688008CC401 /* BoardTableViewCell.xib in Resources */,
 				B298C66D21FEACB9008CC401 /* VersionTableViewCell.xib in Resources */,
 				B2FAEBB421FD1D61001F0D39 /* Assets.xcassets in Resources */,
 				B2FAEBF921FD481E001F0D39 /* StartStoryboard.storyboard in Resources */,
 				B298C64821FE83A0008CC401 /* SettingsStoryboard.storyboard in Resources */,
 				B2FAEBE321FD2F3B001F0D39 /* LoginStoryboard.storyboard in Resources */,
 				B298C69221FEC3CD008CC401 /* IssueTableViewCell.xib in Resources */,
-				B298C68021FEB688008CC401 /* ListSprintsStoryboard.storyboard in Resources */,
+				B298C68021FEB688008CC401 /* ListBoardsStoryboard.storyboard in Resources */,
 				B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */,
 				B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */,
 			);
@@ -833,6 +900,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-jira-work-log/Pods-jira-work-log-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -846,6 +914,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGCircularSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -875,31 +944,36 @@
 				B298C65021FE88B0008CC401 /* SettingsRouter.swift in Sources */,
 				B298C66321FEA5CF008CC401 /* ListVersionsPresenter.swift in Sources */,
 				B2FAEBF521FD4445001F0D39 /* ViewWithBorderRoundCorner.swift in Sources */,
-				B298C67E21FEB688008CC401 /* JIRASprint.swift in Sources */,
+				B298C67E21FEB688008CC401 /* JIRABoard.swift in Sources */,
 				B2A506822200236700B0211A /* SettingsInteractor.swift in Sources */,
 				B298C69721FEC52C008CC401 /* BoardPresenter.swift in Sources */,
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
-				B298C68321FEB688008CC401 /* ListSprintsViewController.swift in Sources */,
+				B298C68321FEB688008CC401 /* ListBoardsViewController.swift in Sources */,
+				B21451F222024A56003FB487 /* JIRABurnDownChart.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
 				B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */,
 				B2A5068822009F6F00B0211A /* JIRAResponseSession.swift in Sources */,
-				B298C68421FEB688008CC401 /* ListSprintsInteractor.swift in Sources */,
+				B298C68421FEB688008CC401 /* ListBoardsInteractor.swift in Sources */,
+				B21451FE220258B8003FB487 /* BurnDownChartViewController.swift in Sources */,
 				B2A506702200026500B0211A /* JIRATimeTracking+Alert.swift in Sources */,
 				B298C63421FE6B17008CC401 /* ProjectTableViewCell.swift in Sources */,
-				B298C68121FEB688008CC401 /* SprintTableViewCell.swift in Sources */,
+				B21451F522024BE2003FB487 /* BurnDownChartInteractor.swift in Sources */,
+				B298C68121FEB688008CC401 /* BoardTableViewCell.swift in Sources */,
 				B298C63A21FE6BCE008CC401 /* ListProjectsPresenter.swift in Sources */,
+				B2145201220259F3003FB487 /* BurnDownChartRouter.swift in Sources */,
 				B298C66C21FEACB9008CC401 /* VersionTableViewCell.swift in Sources */,
 				B295B890220173CA000859B3 /* HTTPConnection.swift in Sources */,
 				B2A5068A22009F8600B0211A /* JIRASession.swift in Sources */,
 				B2FAEBF121FD4394001F0D39 /* R.generated.swift in Sources */,
 				B2A5067F22001CF200B0211A /* IssueInteractor.swift in Sources */,
 				B298C62B21FE4479008CC401 /* ViewController.swift in Sources */,
-				B298C67F21FEB688008CC401 /* ListSprintsPresenter.swift in Sources */,
+				B298C67F21FEB688008CC401 /* ListBoardsPresenter.swift in Sources */,
 				B298C63E21FE6C39008CC401 /* ListProjectsInteractor.swift in Sources */,
 				B298C6AB21FF5AA7008CC401 /* JIRAIssuetype.swift in Sources */,
 				B298C69121FEC3CD008CC401 /* IssueTableViewCell.swift in Sources */,
 				B298C65721FE9676008CC401 /* JIRAVersion.swift in Sources */,
 				B295B8932201743F000859B3 /* Credentials.swift in Sources */,
+				B21451FB220253AA003FB487 /* BurnDownChartPresenter.swift in Sources */,
 				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
 				B298C64121FE7514008CC401 /* Router.swift in Sources */,
 				B298C69F21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift in Sources */,

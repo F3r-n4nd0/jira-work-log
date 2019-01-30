@@ -1,5 +1,5 @@
 //
-//  ListSprintsViewController.swift
+//  ListBoardsViewController.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ListSprintsViewController: ViewController {
+class ListBoardsViewController: ViewController {
 
-    internal var presenter: ListSprintsPresenter!
+    internal var presenter: ListBoardsPresenter!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,7 @@ class ListSprintsViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(R.nib.sprintTableViewCell)
+        tableView.register(R.nib.boardTableViewCell)
         subscribeTable()
         subscribeLoading()
         subscribeNotification()
@@ -33,7 +33,7 @@ class ListSprintsViewController: ViewController {
     
     func subscribeTable() {
         presenter.sprints.asObservable()
-            .bind(to: tableView.rx.items(cellIdentifier: R.nib.sprintTableViewCell.name, cellType: SprintTableViewCell.self)) { (row, element, cell) in
+            .bind(to: tableView.rx.items(cellIdentifier: R.nib.boardTableViewCell.name, cellType: BoardTableViewCell.self)) { (row, element, cell) in
             cell.textLabel?.text = element.name
             }
             .disposed(by: disposeBag)

@@ -1,5 +1,5 @@
 //
-//  ListVersionsRouter.swift
+//  ListSprintsRouter.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -11,14 +11,14 @@ import RxSwift
 
 class ListSprintsRouter : Router {
  
-    weak var view: ListSprintsViewController?
+    weak var view: ListBoardsViewController?
     
-    let publishRouter = PublishSubject<JIRASprint>()
+    let publishRouter = PublishSubject<JIRABoard>()
     
     static func assembleModule(project: JIRAProject) -> ListSprintsRouter {
-        let view = R.storyboard.listSprintsStoryboard.listSprintsViewController()!
-        let presenter = ListSprintsPresenter(project: project)
-        let interactor = ListSprintsInteractor()
+        let view = R.storyboard.listBoardsStoryboard.listBoardsViewController()!
+        let presenter = ListBoardsPresenter(project: project)
+        let interactor = ListBoardsInteractor()
         let router = ListSprintsRouter()
         view.presenter = presenter
         presenter.router = router
@@ -27,7 +27,7 @@ class ListSprintsRouter : Router {
         return router
     }
     
-    func returnSprint(sprint: JIRASprint) {
+    func returnSprint(board: JIRABoard) {
         publishRouter.onNext(sprint)
         publishRouter.onCompleted()
     }

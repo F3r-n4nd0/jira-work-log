@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daW-XS-IDZ">
-                                <rect key="frame" x="30" y="80" width="315" height="45"/>
+                                <rect key="frame" x="5" y="80" width="365" height="45"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="HMr-WL-4LN"/>
@@ -97,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq3-DP-hbX">
-                                <rect key="frame" x="30" y="145" width="315" height="45"/>
+                                <rect key="frame" x="5" y="180" width="365" height="45"/>
                                 <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="sIF-HT-uJk"/>
@@ -110,15 +110,32 @@
                                     <action selector="touchUpInsideLogOut:" destination="8Oc-al-Mwr" eventType="touchUpInside" id="FWD-ZK-xJ5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-7S-NNR">
+                                <rect key="frame" x="5" y="130" width="365" height="45"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="gJA-an-VIJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Burndown Chart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpInsideBurndownChart:" destination="8Oc-al-Mwr" eventType="touchUpInside" id="3zh-tU-z7c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="daW-XS-IDZ" firstAttribute="top" secondItem="srb-45-CYK" secondAttribute="top" constant="60" id="3Lw-cU-Ajw"/>
-                            <constraint firstItem="daW-XS-IDZ" firstAttribute="leading" secondItem="srb-45-CYK" secondAttribute="leading" constant="30" id="BuK-NH-ARh"/>
-                            <constraint firstItem="srb-45-CYK" firstAttribute="trailing" secondItem="daW-XS-IDZ" secondAttribute="trailing" constant="30" id="gXg-gU-PdZ"/>
-                            <constraint firstItem="Mq3-DP-hbX" firstAttribute="top" secondItem="daW-XS-IDZ" secondAttribute="bottom" constant="20" id="pVo-M1-bky"/>
-                            <constraint firstItem="Mq3-DP-hbX" firstAttribute="leading" secondItem="srb-45-CYK" secondAttribute="leading" constant="30" id="tUF-OT-Hlw"/>
-                            <constraint firstItem="srb-45-CYK" firstAttribute="trailing" secondItem="Mq3-DP-hbX" secondAttribute="trailing" constant="30" id="tcN-xH-l62"/>
+                            <constraint firstItem="srb-45-CYK" firstAttribute="trailing" secondItem="1wz-7S-NNR" secondAttribute="trailing" constant="5" id="7NI-mN-mmo"/>
+                            <constraint firstItem="daW-XS-IDZ" firstAttribute="leading" secondItem="srb-45-CYK" secondAttribute="leading" constant="5" id="BuK-NH-ARh"/>
+                            <constraint firstItem="Mq3-DP-hbX" firstAttribute="top" secondItem="1wz-7S-NNR" secondAttribute="bottom" constant="5" id="IoP-2v-Mvu"/>
+                            <constraint firstItem="1wz-7S-NNR" firstAttribute="leading" secondItem="srb-45-CYK" secondAttribute="leading" constant="5" id="T8G-dP-ovh"/>
+                            <constraint firstItem="1wz-7S-NNR" firstAttribute="top" secondItem="daW-XS-IDZ" secondAttribute="bottom" constant="5" id="XUq-bk-qcR"/>
+                            <constraint firstItem="srb-45-CYK" firstAttribute="trailing" secondItem="daW-XS-IDZ" secondAttribute="trailing" constant="5" id="gXg-gU-PdZ"/>
+                            <constraint firstItem="Mq3-DP-hbX" firstAttribute="leading" secondItem="srb-45-CYK" secondAttribute="leading" constant="5" id="tUF-OT-Hlw"/>
+                            <constraint firstItem="srb-45-CYK" firstAttribute="trailing" secondItem="Mq3-DP-hbX" secondAttribute="trailing" constant="5" id="tcN-xH-l62"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="srb-45-CYK"/>
                     </view>

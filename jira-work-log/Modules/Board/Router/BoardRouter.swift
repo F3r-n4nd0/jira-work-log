@@ -77,6 +77,26 @@ class BoardRouter: Router {
             }.disposed(by: disposeBag)
     }
     
-    
+    func showBurnDownChart(settings: Settings, callBack: @escaping (SimpleResult) -> Void) {
+        let burnDownCharRouter = BurnDownChartRouter.assembleModule(settings: settings)
+        executeInMainThread {
+            self.view?.navigationController?.pushViewController(burnDownCharRouter.view!, animated: true)
+        }
+        burnDownCharRouter.publishRouter.subscribe { [weak self] (event) in
+            switch event {
+            case .next(_):
+                callBack(SimpleResult.success())
+                break
+            case .error(let error):
+                callBack(SimpleResult.failure(error: error))
+                break
+            case .completed:
+                self?.executeInMainThread {
+                    self?.view?.navigationController?.popViewController(animated: true)
+                }
+                break
+            }
+            }.disposed(by: disposeBag)
+    }
     
 }

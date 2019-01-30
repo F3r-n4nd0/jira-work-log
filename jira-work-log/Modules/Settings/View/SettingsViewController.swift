@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var textFieldProject: UITextField!
     @IBOutlet weak var textFieldVersion: UITextField!
-    @IBOutlet weak var textFieldSprint: UITextField!
+    @IBOutlet weak var textFieldboard: UITextField!
     
     
     override func viewDidLoad() {

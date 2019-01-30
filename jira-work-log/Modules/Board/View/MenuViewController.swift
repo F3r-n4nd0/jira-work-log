@@ -25,5 +25,9 @@ class MenuViewController: UIViewController {
     @IBAction func touchUpInsideLogOut(_ sender: UIButton) {
         boardViewController?.selectLogOut()
     }
+    
+    @IBAction func touchUpInsideBurndownChart(_ sender: UIButton) {
+        boardViewController?.selectBurndownChart()
+    }
 
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct JIRASprint: Codable {
+public struct JIRABoard: Codable {
     
     let id: Int
     let name: String

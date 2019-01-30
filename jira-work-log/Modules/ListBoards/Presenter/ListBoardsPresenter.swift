@@ -1,5 +1,5 @@
 //
-//  ListSprintsPresenter.swift
+//  ListBoardsPresenter.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -9,15 +9,15 @@
 import Foundation
 import RxSwift
 
-class ListSprintsPresenter {
+class ListBoardsPresenter {
     
     var router: ListSprintsRouter!
-    var interactor: ListSprintsInteractor!
+    var interactor: ListBoardsInteractor!
     
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
     
-    let sprints = Variable<[JIRASprint]>([])
+    let sprints = Variable<[JIRABoard]>([])
     
     private var project: JIRAProject
     
@@ -27,7 +27,7 @@ class ListSprintsPresenter {
     
     func getSprints() {
         publishLoading.onNext(true)
-        interactor.getAllSprints(project: project ) { [weak self] (result) in
+        interactor.getAllBoards(project: project ) { [weak self] (result) in
             self?.publishLoading.onNext(false)
             switch result {
             case .success(let result):
@@ -40,7 +40,7 @@ class ListSprintsPresenter {
     
     func selectIndexPath(index: IndexPath) {
         let sprint = sprints.value[index.row]
-        router.returnSprint(sprint: sprint)
+        router.returnSprint(board: sprint)
     }
     
     func cancel() {

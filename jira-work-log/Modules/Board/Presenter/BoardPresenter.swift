@@ -53,6 +53,19 @@ class BoardPresenter {
         }
     }
     
+    func showBurnDownChart() {
+        if !settings.isValid() {
+            return
+        }
+        router.showBurnDownChart(settings: settings) { [weak self] (result) in
+            switch result {
+            case .success: break
+            case .failure(let error):
+                self?.publishShowNotification.onNext(Result.failure(error: error))
+            }
+        }
+    }
+    
     func logOut() {
         interactor.removeSettingsAndCredentials()
         router.close()

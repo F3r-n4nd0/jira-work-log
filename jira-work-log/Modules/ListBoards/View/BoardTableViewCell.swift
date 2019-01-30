@@ -1,5 +1,5 @@
 //
-//  SprintTableViewCell.swift
+//  BoardTableViewCell.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SprintTableViewCell: UITableViewCell {
+class BoardTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

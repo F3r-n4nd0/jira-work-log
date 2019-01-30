@@ -10,7 +10,7 @@ import Foundation
 
 struct JIRAResponseBoard: Codable {
     
-    let values: [JIRASprint]
+    let values: [JIRABoard]
     
 }
 

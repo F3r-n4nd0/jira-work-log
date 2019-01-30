@@ -15,10 +15,10 @@ public struct Settings: Codable {
     
     public var project: JIRAProject?
     public var version: JIRAVersion?
-    public var sprint: JIRASprint?
+    public var board: JIRABoard?
     
     func isValid() -> Bool {
-        return (project != nil) && (version != nil) && (sprint != nil)
+        return (project != nil) && (version != nil) && (board != nil)
     }
 }
 

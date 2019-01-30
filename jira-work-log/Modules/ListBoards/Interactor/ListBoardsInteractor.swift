@@ -1,5 +1,5 @@
 //
-//  ListVersionsInteractor.swift
+//  ListBoardsInteractor.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-class ListSprintsInteractor {
+class ListBoardsInteractor {
     
-    func getAllSprints(project: JIRAProject,  callBack: @escaping (Result<[JIRASprint]>) -> Void) {
+    func getAllBoards(project: JIRAProject,  callBack: @escaping (Result<[JIRABoard]>) -> Void) {
         let path = "/rest/agile/1.0/board?projectKeyOrId=\(project.id ?? "")&type=scrum"
         let request = HTTPConnection.shared.createGetRequest(path:path)!
         let session = URLSession.shared

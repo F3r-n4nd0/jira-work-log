@@ -11,7 +11,7 @@ import Foundation
 class BoardInteractor {
     
     func getAllIssues(settings: Settings,  callBack: @escaping (Result<[JIRAIssue]>) -> Void) {
-        let path = "/rest/agile/1.0/board/\(settings.sprint?.id ?? 0)/issue?boardId=\(settings.sprint?.id ?? 0)"
+        let path = "/rest/agile/1.0/board/\(settings.board?.id ?? 0)/issue?boardId=\(settings.board?.id ?? 0)"
         let request = HTTPConnection.shared.createGetRequest(path: path)!
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) -> Void  in

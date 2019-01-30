@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.2.1):
+    - Charts/Core (= 3.2.1)
+  - Charts/Core (3.2.1)
   - HGCircularSlider (2.0.0)
   - NVActivityIndicatorView (4.6.1):
     - NVActivityIndicatorView/Presenter (= 4.6.1)
@@ -15,6 +18,7 @@ PODS:
   - SideMenu (5.0.3)
 
 DEPENDENCIES:
+  - Charts
   - HGCircularSlider
   - NVActivityIndicatorView
   - R.swift
@@ -25,6 +29,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Charts
     - HGCircularSlider
     - NVActivityIndicatorView
     - R.swift
@@ -36,6 +41,7 @@ SPEC REPOS:
     - SideMenu
 
 SPEC CHECKSUMS:
+  Charts: f122fb70b19847fa5817d018b77d6c5a2296ab25
   HGCircularSlider: 92e2ee098c814709f455b8f46cd9008147f6a869
   NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
@@ -46,6 +52,6 @@ SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: cea0ccb781327ba22a896261eeb27d212d7d9020
+PODFILE CHECKSUM: 0db2e832a0f269ce1a715ccc63c4ddd0b50d6bdd
 
 COCOAPODS: 1.6.0.rc.1
