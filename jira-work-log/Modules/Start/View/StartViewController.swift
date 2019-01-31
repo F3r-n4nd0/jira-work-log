@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class StartViewController: UINavigationController {
 
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loginRoute = LoginRouter.assembleModule()
@@ -17,6 +20,17 @@ class StartViewController: UINavigationController {
         if getCredentials() {
             let router = BoardRouter.assembleModule(settings: GetSettings() ?? Settings())
             self.addChild(router.view!)
+            router.publishRouter.subscribe { [weak self] (event) in
+                switch event {
+                case .next(_):
+                    break
+                case .error(_):
+                    break
+                case .completed:
+                    self?.popViewController(animated: true)
+                    break
+                }
+                }.disposed(by: disposeBag)
         }
     }
     

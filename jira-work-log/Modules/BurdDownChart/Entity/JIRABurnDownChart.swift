@@ -9,6 +9,7 @@
 import Foundation
 
 struct JIRABurnDownChart: Codable {
+    
     let changes: [String: [Change]]
     let startTime, endTime, now: Int
     let statisticField: StatisticField
@@ -16,15 +17,15 @@ struct JIRABurnDownChart: Codable {
     let workRateData: WorkRateData
     
     func startTimeDate() -> Date {
-        return Date(timeIntervalSince1970: TimeInterval(startTime))
+        return Date(timeIntervalSince1970: TimeInterval(startTime / 1000))
     }
     
     func endTimeDate() -> Date {
-        return Date(timeIntervalSince1970: TimeInterval(endTime))
+        return Date(timeIntervalSince1970: TimeInterval(endTime / 1000))
     }
     
     func nowDate() -> Date {
-        return Date(timeIntervalSince1970: TimeInterval(now))
+        return Date(timeIntervalSince1970: TimeInterval(now / 1000))
     }
 }
 

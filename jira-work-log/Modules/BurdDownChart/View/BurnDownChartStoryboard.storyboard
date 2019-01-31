@@ -21,17 +21,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-bR-bcw" customClass="ViewWithBorderRoundCorner" customModule="jira_work_log" customModuleProvider="target">
                                 <rect key="frame" x="20" y="40" width="335" height="607"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-Hg-EJa" customClass="CombinedChartView" customModule="Charts">
-                                        <rect key="frame" x="25" y="25" width="285" height="557"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSy-gW-VLL">
+                                        <rect key="frame" x="25" y="65" width="285" height="517"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-Hg-EJa" customClass="CombinedChartView" customModule="Charts">
+                                                <rect key="frame" x="0.0" y="0.0" width="855" height="517"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TlS-Hg-EJa" firstAttribute="width" secondItem="HSy-gW-VLL" secondAttribute="width" multiplier="3" id="0nM-fF-e86"/>
+                                            <constraint firstItem="TlS-Hg-EJa" firstAttribute="top" secondItem="HSy-gW-VLL" secondAttribute="top" id="2gf-TD-1Hq"/>
+                                            <constraint firstItem="TlS-Hg-EJa" firstAttribute="height" secondItem="HSy-gW-VLL" secondAttribute="height" id="PAo-Uz-mbv"/>
+                                            <constraint firstItem="TlS-Hg-EJa" firstAttribute="leading" secondItem="HSy-gW-VLL" secondAttribute="leading" id="XFv-5S-P64"/>
+                                            <constraint firstAttribute="trailing" secondItem="TlS-Hg-EJa" secondAttribute="trailing" id="yHp-ef-7Hg"/>
+                                            <constraint firstAttribute="bottom" secondItem="TlS-Hg-EJa" secondAttribute="bottom" id="zYf-Gp-PF9"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Sprint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-lR-F1Q">
+                                        <rect key="frame" x="25" y="25" width="285" height="30"/>
+                                        <gestureRecognizers/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tTf-Fn-BB9" appends="YES" id="c23-MA-GOK"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TlS-Hg-EJa" firstAttribute="top" secondItem="oLf-bR-bcw" secondAttribute="top" constant="25" id="8zs-5K-PGz"/>
-                                    <constraint firstItem="TlS-Hg-EJa" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="QDX-7e-6Jl"/>
-                                    <constraint firstAttribute="trailing" secondItem="TlS-Hg-EJa" secondAttribute="trailing" constant="25" id="Wh7-o9-qur"/>
-                                    <constraint firstAttribute="bottom" secondItem="TlS-Hg-EJa" secondAttribute="bottom" constant="25" id="vU7-xe-sXn"/>
+                                    <constraint firstItem="EwX-lR-F1Q" firstAttribute="top" secondItem="oLf-bR-bcw" secondAttribute="top" constant="25" id="Okc-7K-hgy"/>
+                                    <constraint firstItem="EwX-lR-F1Q" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="Pfv-Nw-IjO"/>
+                                    <constraint firstAttribute="trailing" secondItem="EwX-lR-F1Q" secondAttribute="trailing" constant="25" id="SSx-tC-hIJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HSy-gW-VLL" secondAttribute="trailing" constant="25" id="TFn-Cw-tfX"/>
+                                    <constraint firstItem="HSy-gW-VLL" firstAttribute="top" secondItem="EwX-lR-F1Q" secondAttribute="bottom" constant="10" id="cp8-Mg-gfS"/>
+                                    <constraint firstItem="HSy-gW-VLL" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="teN-y8-878"/>
+                                    <constraint firstAttribute="bottom" secondItem="HSy-gW-VLL" secondAttribute="bottom" constant="25" id="uqR-VT-o4D"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBorder">
@@ -51,9 +77,15 @@
                     </view>
                     <connections>
                         <outlet property="chartView" destination="TlS-Hg-EJa" id="WOJ-oK-yro"/>
+                        <outlet property="textFieldSprint" destination="EwX-lR-F1Q" id="YSI-Au-XYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N94-tL-4NB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tTf-Fn-BB9" userLabel="TapGestureRecognizerSprint">
+                    <connections>
+                        <action selector="selectSprint:" destination="eyb-uM-zc5" id="tpJ-kV-t0B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-42.399999999999999" y="151.57421289355324"/>
         </scene>

@@ -1,18 +1,18 @@
 //
-//  BurnDownChartInteractor.swift
+//  ListVersionsInteractor.swift
 //  jira-work-log
 //
-//  Created by Fernando Luna on 1/30/19.
+//  Created by Fernando Luna on 1/27/19.
 //  Copyright © 2019 Fernando Luna. All rights reserved.
 //
 
 import Foundation
 
-class BurnDownChartInteractor {
+class ListSprintsInteractor {
     
-    func GetData(sprint: JIRASprint, callBack: @escaping (Result<JIRABurnDownChart>) -> Void) {
-        let path = "/rest/greenhopper/1.0/rapid/charts/scopechangeburndownchart.json?rapidViewId=8&sprintId=\(sprint.id)"
-        let request = HTTPConnection.shared.createGetRequest(path: path)!
+    func getAllSprints(board: JIRABoard,  callBack: @escaping (Result<[JIRASprint]>) -> Void) {
+        let path = "/rest/agile/1.0/board/\(board.id)/sprint"
+        let request = HTTPConnection.shared.createGetRequest(path:path)!
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void  in
             if let error = error {
@@ -25,8 +25,8 @@ class BurnDownChartInteractor {
                 return
             }
             do {
-                let response = try JSONDecoder().decode(JIRABurnDownChart.self, from: data!)
-                callBack(Result.success(result: response))
+                let response = try JSONDecoder().decode(JIRAResponseSprint.self, from: data!)
+                callBack(Result.success(result: response.values))
                 return
             } catch let error {
                 callBack(Result.failure(error: error))
@@ -36,6 +36,5 @@ class BurnDownChartInteractor {
         
         dataTask.resume()
     }
-    
     
 }

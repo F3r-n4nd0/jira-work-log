@@ -51,11 +51,11 @@ class SettingsPresenter {
         }
     }
     
-    func selectSprint() {
+    func selectBoard() {
         guard let project = settings.value.project else {
             return
         }
-        router.selectSprint(project: project) { [weak self] (result) in
+        router.selectBoard(project: project) { [weak self] (result) in
             switch result {
             case .success(let sprint):
                 self?.settings.value.board = sprint

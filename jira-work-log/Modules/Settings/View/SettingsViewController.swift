@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var textFieldProject: UITextField!
     @IBOutlet weak var textFieldVersion: UITextField!
-    @IBOutlet weak var textFieldboard: UITextField!
+    @IBOutlet weak var textFieldBoard: UITextField!
     
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class SettingsViewController: UIViewController {
     func loadSettingsData(settings: Settings) {
         textFieldProject.text = settings.project?.name ?? ""
         textFieldVersion.text = settings.version?.name ?? ""
-        textFieldSprint.text = settings.sprint?.name ?? ""
+        textFieldBoard.text = settings.board?.name ?? ""
     }
     
     
@@ -45,8 +45,8 @@ class SettingsViewController: UIViewController {
         presenter.selectVersion()
     }
     
-    @IBAction func selectTapSelectSprint(_ sender: UITapGestureRecognizer) {
-        presenter.selectSprint()
+    @IBAction func selectTapSelectBoard(_ sender: UITapGestureRecognizer) {
+        presenter.selectBoard()
     }
 
     @IBAction func selectDone(_ sender: UIBarButtonItem) {

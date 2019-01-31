@@ -14,6 +14,15 @@
 		B21451FB220253AA003FB487 /* BurnDownChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451FA220253AA003FB487 /* BurnDownChartPresenter.swift */; };
 		B21451FE220258B8003FB487 /* BurnDownChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21451FD220258B8003FB487 /* BurnDownChartViewController.swift */; };
 		B2145201220259F3003FB487 /* BurnDownChartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2145200220259F3003FB487 /* BurnDownChartRouter.swift */; };
+		B21452292202774E003FB487 /* JIRAResponseSprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214521C2202774E003FB487 /* JIRAResponseSprint.swift */; };
+		B214522A2202774E003FB487 /* JIRASprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214521D2202774E003FB487 /* JIRASprint.swift */; };
+		B214522B2202774E003FB487 /* ListSprintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B214521F2202774E003FB487 /* ListSprintsPresenter.swift */; };
+		B214522C2202774E003FB487 /* ListSprintsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21452212202774E003FB487 /* ListSprintsStoryboard.storyboard */; };
+		B214522D2202774E003FB487 /* SprintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21452222202774E003FB487 /* SprintTableViewCell.swift */; };
+		B214522E2202774E003FB487 /* SprintTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21452232202774E003FB487 /* SprintTableViewCell.xib */; };
+		B214522F2202774E003FB487 /* ListSprintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21452242202774E003FB487 /* ListSprintsViewController.swift */; };
+		B21452302202774E003FB487 /* ListSprintsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21452262202774E003FB487 /* ListSprintsInteractor.swift */; };
+		B21452312202774E003FB487 /* ListSprintsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21452282202774E003FB487 /* ListSprintsRouter.swift */; };
 		B295B890220173CA000859B3 /* HTTPConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B88F220173CA000859B3 /* HTTPConnection.swift */; };
 		B295B8932201743F000859B3 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B295B8922201743F000859B3 /* Credentials.swift */; };
 		B298C62721FE4116008CC401 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C62621FE4116008CC401 /* Result.swift */; };
@@ -48,7 +57,7 @@
 		B298C68221FEB688008CC401 /* BoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B298C67821FEB688008CC401 /* BoardTableViewCell.xib */; };
 		B298C68321FEB688008CC401 /* ListBoardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67921FEB688008CC401 /* ListBoardsViewController.swift */; };
 		B298C68421FEB688008CC401 /* ListBoardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67B21FEB688008CC401 /* ListBoardsInteractor.swift */; };
-		B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */; };
+		B298C68521FEB688008CC401 /* ListBoardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C67D21FEB688008CC401 /* ListBoardsRouter.swift */; };
 		B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */; };
 		B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */; };
 		B298C68D21FEC395008CC401 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B298C68C21FEC395008CC401 /* BoardViewController.swift */; };
@@ -97,6 +106,15 @@
 		B21451FA220253AA003FB487 /* BurnDownChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartPresenter.swift; sourceTree = "<group>"; };
 		B21451FD220258B8003FB487 /* BurnDownChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartViewController.swift; sourceTree = "<group>"; };
 		B2145200220259F3003FB487 /* BurnDownChartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurnDownChartRouter.swift; sourceTree = "<group>"; };
+		B214521C2202774E003FB487 /* JIRAResponseSprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JIRAResponseSprint.swift; sourceTree = "<group>"; };
+		B214521D2202774E003FB487 /* JIRASprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JIRASprint.swift; sourceTree = "<group>"; };
+		B214521F2202774E003FB487 /* ListSprintsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsPresenter.swift; sourceTree = "<group>"; };
+		B21452212202774E003FB487 /* ListSprintsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListSprintsStoryboard.storyboard; sourceTree = "<group>"; };
+		B21452222202774E003FB487 /* SprintTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprintTableViewCell.swift; sourceTree = "<group>"; };
+		B21452232202774E003FB487 /* SprintTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SprintTableViewCell.xib; sourceTree = "<group>"; };
+		B21452242202774E003FB487 /* ListSprintsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsViewController.swift; sourceTree = "<group>"; };
+		B21452262202774E003FB487 /* ListSprintsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsInteractor.swift; sourceTree = "<group>"; };
+		B21452282202774E003FB487 /* ListSprintsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsRouter.swift; sourceTree = "<group>"; };
 		B295B88F220173CA000859B3 /* HTTPConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConnection.swift; sourceTree = "<group>"; };
 		B295B8922201743F000859B3 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		B298C62621FE4116008CC401 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -131,7 +149,7 @@
 		B298C67821FEB688008CC401 /* BoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardTableViewCell.xib; sourceTree = "<group>"; };
 		B298C67921FEB688008CC401 /* ListBoardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsViewController.swift; sourceTree = "<group>"; };
 		B298C67B21FEB688008CC401 /* ListBoardsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsInteractor.swift; sourceTree = "<group>"; };
-		B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSprintsRouter.swift; sourceTree = "<group>"; };
+		B298C67D21FEB688008CC401 /* ListBoardsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBoardsRouter.swift; sourceTree = "<group>"; };
 		B298C68621FEBC1E008CC401 /* JIRAResponseBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIRAResponseBoard.swift; sourceTree = "<group>"; };
 		B298C68A21FEC2B1008CC401 /* BoardStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoardStoryboard.storyboard; sourceTree = "<group>"; };
 		B298C68C21FEC395008CC401 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +265,62 @@
 			isa = PBXGroup;
 			children = (
 				B2145200220259F3003FB487 /* BurnDownChartRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B214521A2202774E003FB487 /* ListSprints */ = {
+			isa = PBXGroup;
+			children = (
+				B214521B2202774E003FB487 /* Entity */,
+				B214521E2202774E003FB487 /* Presenter */,
+				B21452202202774E003FB487 /* View */,
+				B21452252202774E003FB487 /* Interactor */,
+				B21452272202774E003FB487 /* Router */,
+			);
+			path = ListSprints;
+			sourceTree = "<group>";
+		};
+		B214521B2202774E003FB487 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B214521C2202774E003FB487 /* JIRAResponseSprint.swift */,
+				B214521D2202774E003FB487 /* JIRASprint.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B214521E2202774E003FB487 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B214521F2202774E003FB487 /* ListSprintsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B21452202202774E003FB487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21452212202774E003FB487 /* ListSprintsStoryboard.storyboard */,
+				B21452222202774E003FB487 /* SprintTableViewCell.swift */,
+				B21452232202774E003FB487 /* SprintTableViewCell.xib */,
+				B21452242202774E003FB487 /* ListSprintsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21452252202774E003FB487 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B21452262202774E003FB487 /* ListSprintsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B21452272202774E003FB487 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B21452282202774E003FB487 /* ListSprintsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -483,7 +557,7 @@
 		B298C67C21FEB688008CC401 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				B298C67D21FEB688008CC401 /* ListSprintsRouter.swift */,
+				B298C67D21FEB688008CC401 /* ListBoardsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -662,6 +736,7 @@
 		B2FAEBDC21FD25F3001F0D39 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B214521A2202774E003FB487 /* ListSprints */,
 				B21451EF220240EB003FB487 /* BurdDownChart */,
 				B2A50671220006A400B0211A /* Issue */,
 				B2FAEBF221FD4419001F0D39 /* Common */,
@@ -842,6 +917,8 @@
 				B298C69221FEC3CD008CC401 /* IssueTableViewCell.xib in Resources */,
 				B298C68021FEB688008CC401 /* ListBoardsStoryboard.storyboard in Resources */,
 				B298C68B21FEC2B1008CC401 /* BoardStoryboard.storyboard in Resources */,
+				B214522C2202774E003FB487 /* ListSprintsStoryboard.storyboard in Resources */,
+				B214522E2202774E003FB487 /* SprintTableViewCell.xib in Resources */,
 				B298C62F21FE69CB008CC401 /* ListProjectsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -950,8 +1027,9 @@
 				B2FAEBFB21FD4854001F0D39 /* StartViewController.swift in Sources */,
 				B298C68321FEB688008CC401 /* ListBoardsViewController.swift in Sources */,
 				B21451F222024A56003FB487 /* JIRABurnDownChart.swift in Sources */,
+				B214522B2202774E003FB487 /* ListSprintsPresenter.swift in Sources */,
 				B2FAEBE521FD3FBD001F0D39 /* LoginViewController.swift in Sources */,
-				B298C68521FEB688008CC401 /* ListSprintsRouter.swift in Sources */,
+				B298C68521FEB688008CC401 /* ListBoardsRouter.swift in Sources */,
 				B2A5068822009F6F00B0211A /* JIRAResponseSession.swift in Sources */,
 				B298C68421FEB688008CC401 /* ListBoardsInteractor.swift in Sources */,
 				B21451FE220258B8003FB487 /* BurnDownChartViewController.swift in Sources */,
@@ -976,9 +1054,11 @@
 				B21451FB220253AA003FB487 /* BurnDownChartPresenter.swift in Sources */,
 				B2FAEBEB21FD40D1001F0D39 /* LoginInteractor.swift in Sources */,
 				B298C64121FE7514008CC401 /* Router.swift in Sources */,
+				B21452292202774E003FB487 /* JIRAResponseSprint.swift in Sources */,
 				B298C69F21FEC6BE008CC401 /* JIRAResponseIssuesBoard.swift in Sources */,
 				B2FAEBAD21FD1D5F001F0D39 /* AppDelegate.swift in Sources */,
 				B2A5067922001C5B00B0211A /* IssueRouter.swift in Sources */,
+				B214522A2202774E003FB487 /* JIRASprint.swift in Sources */,
 				B298C6AD21FF7A96008CC401 /* JIRAIssueTypeName.swift in Sources */,
 				B298C68721FEBC1E008CC401 /* JIRAResponseBoard.swift in Sources */,
 				B298C62921FE412F008CC401 /* SimpleResult.swift in Sources */,
@@ -988,6 +1068,8 @@
 				B298C63121FE6A6C008CC401 /* ListProjectsViewController.swift in Sources */,
 				B298C62721FE4116008CC401 /* Result.swift in Sources */,
 				B2FAEBE021FD2E4A001F0D39 /* LoginRouter.swift in Sources */,
+				B214522D2202774E003FB487 /* SprintTableViewCell.swift in Sources */,
+				B21452312202774E003FB487 /* ListSprintsRouter.swift in Sources */,
 				B298C69D21FEC698008CC401 /* JIRAIssue.swift in Sources */,
 				B298C66921FEA5CF008CC401 /* ListVersionsRouter.swift in Sources */,
 				B2FAEBE821FD403E001F0D39 /* LoginPresenter.swift in Sources */,
@@ -996,8 +1078,10 @@
 				B298C69A21FEC562008CC401 /* BoardInteractor.swift in Sources */,
 				B298C66621FEA5CF008CC401 /* ListVertionsViewController.swift in Sources */,
 				B298C65321FE9086008CC401 /* Settings.swift in Sources */,
+				B214522F2202774E003FB487 /* ListSprintsViewController.swift in Sources */,
 				B2A5066E21FFFDE800B0211A /* JIRAIssueTypeName+Icon.swift in Sources */,
 				B298C64E21FE87E1008CC401 /* SettingsPresenter.swift in Sources */,
+				B21452302202774E003FB487 /* ListSprintsInteractor.swift in Sources */,
 				B298C68D21FEC395008CC401 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1138,13 +1222,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				DEVELOPMENT_TEAM = 5VF9NVGSKV;
 				INFOPLIST_FILE = "jira-work-log/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-log";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-worklog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1157,13 +1241,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6KT99K9W6R;
+				DEVELOPMENT_TEAM = 5VF9NVGSKV;
 				INFOPLIST_FILE = "jira-work-log/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-work-log";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.f3rn4nd0.jira-worklog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

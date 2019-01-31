@@ -69,15 +69,15 @@ class SettingsRouter : Router {
             }.disposed(by: disposeBag)
     }
     
-    func selectSprint(project: JIRAProject ,callBack: @escaping (Result<JIRABoard>) -> Void) {
-        let listSprintRouter = ListSprintsRouter.assembleModule(project: project)
+    func selectBoard(project: JIRAProject ,callBack: @escaping (Result<JIRABoard>) -> Void) {
+        let listBoardRouter = ListBoardsRouter.assembleModule(project: project)
         executeInMainThread {
-            self.view?.navigationController?.pushViewController(listSprintRouter.view!, animated: true)
+            self.view?.navigationController?.pushViewController(listBoardRouter.view!, animated: true)
         }
-        listSprintRouter.publishRouter.subscribe { [weak self] (event) in
+        listBoardRouter.publishRouter.subscribe { [weak self] (event) in
             switch event {
-            case .next(let sprint):
-                callBack(Result.success(result: sprint))
+            case .next(let board):
+                callBack(Result.success(result: board))
                 break
             case .error(let error):
                 callBack(Result.failure(error: error))

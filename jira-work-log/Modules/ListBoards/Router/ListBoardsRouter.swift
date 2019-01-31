@@ -1,5 +1,5 @@
 //
-//  ListSprintsRouter.swift
+//  ListBoardsRouter.swift
 //  jira-work-log
 //
 //  Created by Fernando Luna on 1/27/19.
@@ -9,17 +9,17 @@
 import Foundation
 import RxSwift
 
-class ListSprintsRouter : Router {
+class ListBoardsRouter : Router {
  
     weak var view: ListBoardsViewController?
     
     let publishRouter = PublishSubject<JIRABoard>()
     
-    static func assembleModule(project: JIRAProject) -> ListSprintsRouter {
+    static func assembleModule(project: JIRAProject) -> ListBoardsRouter {
         let view = R.storyboard.listBoardsStoryboard.listBoardsViewController()!
         let presenter = ListBoardsPresenter(project: project)
         let interactor = ListBoardsInteractor()
-        let router = ListSprintsRouter()
+        let router = ListBoardsRouter()
         view.presenter = presenter
         presenter.router = router
         presenter.interactor = interactor
@@ -28,7 +28,7 @@ class ListSprintsRouter : Router {
     }
     
     func returnSprint(board: JIRABoard) {
-        publishRouter.onNext(sprint)
+        publishRouter.onNext(board)
         publishRouter.onCompleted()
     }
     
