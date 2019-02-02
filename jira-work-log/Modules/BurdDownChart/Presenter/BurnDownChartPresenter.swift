@@ -21,6 +21,7 @@ class  BurnDownChartPresenter {
         }
     }
     var dates: [Date] = []
+    var data: JIRABurnDownChart?
     
     var publishLoading = PublishSubject<Bool>()
     var publishShowNotification = PublishSubject<Result<String>>()
@@ -48,14 +49,16 @@ class  BurnDownChartPresenter {
     }
     
     func loadData(result: JIRABurnDownChart) {
+        
         var newDate = result.startTimeDate()
         var dates = [Date]()
-        while newDate <= result.endTimeDate()   {
+        let finalDate = result.endTimeDate().addingTimeInterval(12 * 60 * 60)
+        while newDate <= finalDate   {
             dates.append(newDate)
             newDate = newDate.addingTimeInterval(12 * 60 * 60)
         }
         self.dates = dates
-        
+        self.data = result
         guard let sprint = sprint else {
             return
         }
@@ -74,6 +77,18 @@ class  BurnDownChartPresenter {
                 self?.publishShowNotification.onNext(Result.failure(error: error))
             }
         }
+    }
+    
+    func quantityIssuesActive(index: Int) -> Double {
+        guard let data = data else {
+            return 0
+        }
+        let date = data.startTimeDate().addingTimeInterval(TimeInterval(12*60*60*index))
+        return data.getPoints(dateDay:date)
+    }
+    
+    func close() {
+        router.close()
     }
     
 }

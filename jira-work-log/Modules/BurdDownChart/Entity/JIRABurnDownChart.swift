@@ -27,6 +27,27 @@ struct JIRABurnDownChart: Codable {
     func nowDate() -> Date {
         return Date(timeIntervalSince1970: TimeInterval(now / 1000))
     }
+    
+    func getPoints(dateDay: Date) -> Double {
+        let keys = changes.keys.sorted { (a, b) -> Bool in
+            return a < b
+        }
+        var counter: [String: Int] = [:]
+        for key in keys {
+            let change = changes[key]
+            let date = Date(timeIntervalSince1970: TimeInterval(Double(key)! / 1000))
+            if date < dateDay {
+                counter[change?.first?.key ?? ""] = (change?.first?.statC?.newValue ?? 0)
+            }
+        }
+        var sum = 0
+        for count in counter {
+            sum = sum + count.value
+        }
+        return Double(sum)
+    }
+    
+    
 }
 
 struct Change: Codable {

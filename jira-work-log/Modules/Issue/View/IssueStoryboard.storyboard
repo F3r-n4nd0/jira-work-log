@@ -109,14 +109,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA9-bw-LfU">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA9-bw-LfU">
                                         <rect key="frame" x="305" y="35" width="60" height="55.5"/>
-                                        <color key="backgroundColor" name="MainColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="oIQ-eM-hLS"/>
                                         </constraints>
-                                        <state key="normal" title="ADD">
+                                        <state key="normal" image="add-time">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" name="MainColor"/>
                                         </state>
                                         <connections>
                                             <action selector="touchInsideAdd:" destination="mdT-lY-6Uh" eventType="touchUpInside" id="63L-eH-suu"/>
@@ -225,14 +226,14 @@
                                     <constraint firstItem="zb3-lB-50s" firstAttribute="leading" secondItem="Tuv-cg-Zbh" secondAttribute="leading" constant="10" id="meP-i0-RxR"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMG-Pj-RkW">
-                                <rect key="frame" x="295" y="35" width="60" height="30"/>
-                                <color key="backgroundColor" name="MainColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMG-Pj-RkW">
+                                <rect key="frame" x="325" y="35" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="0Yr-Vd-AFx"/>
+                                    <constraint firstAttribute="width" constant="30" id="0Yr-Vd-AFx"/>
                                     <constraint firstAttribute="height" constant="30" id="9xn-1w-Yx3"/>
                                 </constraints>
-                                <state key="normal" title="Close">
+                                <state key="normal" image="delete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -274,6 +275,8 @@
     </scenes>
     <resources>
         <image name="Hours" width="219" height="219"/>
+        <image name="add-time" width="43" height="43"/>
+        <image name="delete" width="21.5" height="21.5"/>
         <namedColor name="MainColor">
             <color red="0.0" green="0.32156862745098042" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

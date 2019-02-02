@@ -49,4 +49,8 @@ class BurnDownChartRouter : Router {
             }.disposed(by: disposeBag)
     }
     
+    func close() {
+        publishRouter.onCompleted()
+    }
+    
 }

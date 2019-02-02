@@ -22,10 +22,10 @@
                                 <rect key="frame" x="20" y="40" width="335" height="607"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSy-gW-VLL">
-                                        <rect key="frame" x="25" y="65" width="285" height="517"/>
+                                        <rect key="frame" x="0.0" y="85" width="335" height="522"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-Hg-EJa" customClass="CombinedChartView" customModule="Charts">
-                                                <rect key="frame" x="0.0" y="0.0" width="855" height="517"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1005" height="522"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -38,8 +38,8 @@
                                             <constraint firstAttribute="bottom" secondItem="TlS-Hg-EJa" secondAttribute="bottom" id="zYf-Gp-PF9"/>
                                         </constraints>
                                     </scrollView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Sprint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-lR-F1Q">
-                                        <rect key="frame" x="25" y="25" width="285" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a sprint" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-lR-F1Q">
+                                        <rect key="frame" x="25" y="45" width="285" height="30"/>
                                         <gestureRecognizers/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,16 +48,37 @@
                                             <outletCollection property="gestureRecognizers" destination="tTf-Fn-BB9" appends="YES" id="c23-MA-GOK"/>
                                         </connections>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprint:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjr-k9-5QB">
+                                        <rect key="frame" x="25" y="16" width="51" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NO-rZ-weV">
+                                        <rect key="frame" x="305" y="5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="8l6-Py-0BS"/>
+                                            <constraint firstAttribute="height" constant="25" id="ag1-bK-NCJ"/>
+                                        </constraints>
+                                        <state key="normal" image="delete"/>
+                                        <connections>
+                                            <action selector="touchUpInsideClose:" destination="eyb-uM-zc5" eventType="touchUpInside" id="v9N-6L-bhd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="EwX-lR-F1Q" firstAttribute="top" secondItem="oLf-bR-bcw" secondAttribute="top" constant="25" id="Okc-7K-hgy"/>
+                                    <constraint firstItem="1NO-rZ-weV" firstAttribute="top" secondItem="oLf-bR-bcw" secondAttribute="top" constant="5" id="2Gg-hW-XgX"/>
+                                    <constraint firstItem="Hjr-k9-5QB" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="G0c-Gm-DMN"/>
+                                    <constraint firstItem="EwX-lR-F1Q" firstAttribute="top" secondItem="oLf-bR-bcw" secondAttribute="top" constant="45" id="Okc-7K-hgy"/>
                                     <constraint firstItem="EwX-lR-F1Q" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="Pfv-Nw-IjO"/>
                                     <constraint firstAttribute="trailing" secondItem="EwX-lR-F1Q" secondAttribute="trailing" constant="25" id="SSx-tC-hIJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="HSy-gW-VLL" secondAttribute="trailing" constant="25" id="TFn-Cw-tfX"/>
+                                    <constraint firstAttribute="trailing" secondItem="HSy-gW-VLL" secondAttribute="trailing" id="TFn-Cw-tfX"/>
                                     <constraint firstItem="HSy-gW-VLL" firstAttribute="top" secondItem="EwX-lR-F1Q" secondAttribute="bottom" constant="10" id="cp8-Mg-gfS"/>
-                                    <constraint firstItem="HSy-gW-VLL" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" constant="25" id="teN-y8-878"/>
-                                    <constraint firstAttribute="bottom" secondItem="HSy-gW-VLL" secondAttribute="bottom" constant="25" id="uqR-VT-o4D"/>
+                                    <constraint firstAttribute="trailing" secondItem="1NO-rZ-weV" secondAttribute="trailing" constant="5" id="qXV-kD-lZm"/>
+                                    <constraint firstItem="HSy-gW-VLL" firstAttribute="leading" secondItem="oLf-bR-bcw" secondAttribute="leading" id="teN-y8-878"/>
+                                    <constraint firstAttribute="bottom" secondItem="HSy-gW-VLL" secondAttribute="bottom" id="uqR-VT-o4D"/>
+                                    <constraint firstItem="EwX-lR-F1Q" firstAttribute="top" secondItem="Hjr-k9-5QB" secondAttribute="bottom" constant="8" id="xHJ-dN-o9B"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBorder">
@@ -90,4 +111,7 @@
             <point key="canvasLocation" x="-42.399999999999999" y="151.57421289355324"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="delete" width="21.5" height="21.5"/>
+    </resources>
 </document>

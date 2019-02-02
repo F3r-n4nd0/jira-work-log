@@ -50,7 +50,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 9 images.
+  /// This `R.image` struct is generated, and contains static references to 11 images.
   struct image {
     /// Image `Bedtime`.
     static let bedtime = Rswift.ImageResource(bundle: R.hostingBundle, name: "Bedtime")
@@ -60,6 +60,10 @@ struct R: Rswift.Validatable {
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
     /// Image `Wake`.
     static let wake = Rswift.ImageResource(bundle: R.hostingBundle, name: "Wake")
+    /// Image `add-time`.
+    static let addTime = Rswift.ImageResource(bundle: R.hostingBundle, name: "add-time")
+    /// Image `delete`.
+    static let delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "delete")
     /// Image `finish`.
     static let finish = Rswift.ImageResource(bundle: R.hostingBundle, name: "finish")
     /// Image `icon-bug`.
@@ -89,6 +93,16 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Wake", bundle: ..., traitCollection: ...)`
     static func wake(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.wake, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "add-time", bundle: ..., traitCollection: ...)`
+    static func addTime(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.addTime, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "delete", bundle: ..., traitCollection: ...)`
+    static func delete(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.delete, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "finish", bundle: ..., traitCollection: ...)`
@@ -426,6 +440,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "delete", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'BurnDownChartStoryboard', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.burnDownChartStoryboard().burnDownChartViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'burnDownChartViewController' could not be loaded from storyboard 'BurnDownChartStoryboard' as 'BurnDownChartViewController'.") }
@@ -445,6 +460,8 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "Hours", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Hours' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "add-time", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add-time' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "delete", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'delete' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
           if UIKit.UIColor(named: "MainColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'MainColor' is used in storyboard 'IssueStoryboard', but couldn't be loaded.") }
         }
